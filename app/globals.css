@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --black: #0A0806;
+  --dark: #110E0B;
+  --dark2: #1A1410;
+  --dark3: #242018;
+  --copper: #A3623C;
+  --copper-light: #C07A4A;
+  --gold: #A37533;
+  --cream: #F0E8D8;
+  --cream-dim: #B8AD9E;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--black); color: var(--cream); font-family: 'Lato', sans-serif; font-weight: 300; overflow-x: hidden; }
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1000;
+  opacity: 0.35;
+}
+
+.oswald { font-family: 'Oswald', sans-serif; }
+.section-label {
+  font-family: 'Lato', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--copper);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.section-label::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: var(--copper);
+}
+.dotted-divider {
+  width: 100%;
+  height: 1px;
+  background-image: repeating-linear-gradient(90deg, #A3623C 0, #A3623C 4px, transparent 4px, transparent 10px);
+  opacity: 0.4;
+}
+@keyframes ember-rise {
+  0%   { transform: translateY(0) translateX(0) scale(1);   opacity: 0; }
+  10%  { opacity: 1; }
+  80%  { opacity: 0.6; }
+  100% { transform: translateY(-100vh) translateX(var(--drift)) scale(0.3); opacity: 0; }
+}
+
+@keyframes ember-glow {
+  0%, 100% { box-shadow: 0 0 4px 2px rgba(163,98,60,0.8); }
+  50%       { box-shadow: 0 0 8px 4px rgba(192,122,74,1); }
+}
+
+.ember {
+  position: absolute;
+  border-radius: 50%;
+  animation: ember-rise var(--duration) var(--delay) infinite ease-in,
+             ember-glow 0.8s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--black); }
+::-webkit-scrollbar-thumb { background: var(--copper); border-radius: 3px; }
+::selection { background: var(--copper); color: var(--black); }

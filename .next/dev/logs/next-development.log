@@ -1,0 +1,917 @@
+[00:00:02.537] Server  LOG     ✓ Ready in 1798ms
+[00:00:05.656] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:19:32.855] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:27:42.451] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:32:27.659] Server  LOG     ✓ Compiled in 413ms
+[00:32:38.991] Server  LOG     ✓ Compiled in 126ms
+[00:32:50.106] Server  LOG     ✓ Compiled in 55ms
+[00:32:57.506] Server  LOG     ✓ Compiled in 47ms
+[00:33:07.412] Server  LOG     ✓ Compiled in 42ms
+[00:34:38.033] Server  LOG     ✓ Compiled in 503ms
+[00:34:48.224] Server  LOG     ✓ Compiled in 329ms
+[00:34:57.641] Server  LOG     ✓ Compiled in 124ms
+[00:35:44.773] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:35:45.074] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+      <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+        <LoadingBoundary name="/" loading={null}>
+          <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                    <SegmentViewNode type="page" pagePath="page.tsx">
+                      <SegmentTrieNode>
+                      <Home>
+                        <main>
+                          <Navbar>
+                          <Hero>
+                            <section id="hero" className="relative f..." style={{...}}>
+                              <video>
+                              <div>
+                              <span
+                                className="ember"
+                                style={{
++                                 left: "60.04718159501737%"
+-                                 left: "48.3007%"
++                                 bottom: "4.029576375865817%"
+-                                 bottom: "24.5765%"
++                                 width: "2.1076675463400685px"
+-                                 width: "3.15792px"
++                                 height: "2.1076675463400685px"
+-                                 height: "3.15792px"
++                                 background: "#C07A4A"
++                                 --duration: "6.248868093524156s"
+-                                 --duration: "8.501128044799572s"
++                                 --delay: "6.190043231160356s"
+-                                 --delay: "6.273978057724908s"
++                                 --drift: "23.483908542793294px"
+-                                 --drift: "-25.405698303619488px"
++                                 zIndex: 2
+-                                 background-image: "initial"
+-                                 background-position-x: "initial"
+-                                 background-position-y: "initial"
+-                                 background-size: "initial"
+-                                 background-repeat: "initial"
+-                                 background-attachment: "initial"
+-                                 background-origin: "initial"
+-                                 background-clip: "initial"
+-                                 background-color: "rgb(192, 122, 74)"
+-                                 z-index: "2"
+                                }}
+                              >
+                              <span
+                                className="ember"
+                                style={{
++                                 left: "47.92995508330987%"
+-                                 left: "62.6048%"
++                                 bottom: "18.23958526907332%"
+-                                 bottom: "9.85969%"
++                                 width: "2.1683859558609533px"
+-                                 width: "3.26846px"
++                                 height: "2.1683859558609533px"
+-                                 height: "3.26846px"
++                                 background: "#A3623C"
++                                 --duration: "9.010311548088142s"
+-                                 --duration: "8.862678812870811s"
++                                 --delay: "7.023229813376441s"
+-                                 --delay: "7.0652330524788205s"
++                                 --drift: "21.03932089412332px"
+-                                 --drift: "-33.817392995072986px"
++                                 zIndex: 2
+-                                 background-image: "initial"
+-                                 background-position-x: "initial"
+-                                 background-position-y: "initial"
+-                                 background-size: "initial"
+-                                 background-repeat: "initial"
+-                                 background-attachment: "initial"
+-                                 background-origin: "initial"
+-                                 background-clip: "initial"
+-                                 background-color: "rgb(163, 98, 60)"
+-                                 z-index: "2"
+                                }}
+                              >
+                              <span
+                                className="ember"
+                                style={{
++                                 left: "7.9385511884664695%"
+-                                 left: "72.2687%"
++                                 bottom: "0.6969226927202388%"
+-                                 bottom: "24.1578%"
++                                 width: "1.8136789269861542px"
+-                                 width: "2.66013px"
++                                 height: "1.8136789269861542px"
+-                                 height: "2.66013px"
++                                 background: "#C07A4A"
++                                 --duration: "7.216833965194507s"
+-                                 --duration: "9.332183893915344s"
++                                 --delay: "4.656300236191441s"
+-                                 --delay: "5.571824462684043s"
++                                 --drift: "-32.200537791290664px"
+-                                 --drift: "39.23752751492796px"
++                                 zIndex: 2
+-                                 background-image: "initial"
+-                                 background-position-x: "initial"
+-                                 background-position-y: "initial"
+-                                 background-size: "initial"
+-                                 background-repeat: "initial"
+-                                 background-attachment: "initial"
+-                                 background-origin: "initial"
+-                                 background-clip: "initial"
+-                                 background-color: "rgb(163, 98, 60)"
+-                                 z-index: "2"
+                                }}
+                              >
+                              <span
+                                className="ember"
+                                style={{
++                                 left: "7.470728544418259%"
+-                                 left: "76.1496%"
++                                 bottom: "23.058978675169488%"
+-                                 bottom: "0.337644%"
++                                 width: "4.070249084813461px"
+-                                 width: "2.92169px"
++                                 height: "4.070249084813461px"
+-                                 height: "2.92169px"
++                                 background: "#A3623C"
++                                 --duration: "7.7560123176381985s"
+-                                 --duration: "9.881664518181042s"
++                                 --delay: "1.9290994684227334s"
+-                                 --delay: "3.882434685324779s"
++                                 --drift: "-18.026785781245813px"
+-                                 --drift: "34.22335870443723px"
++                                 zIndex: 2
+-                                 background-image: "initial"
+-                                 background-position-x: "initial"
+-                                 background-position-y: "initial"
+-                                 background-size: "initial"
+-                                 background-repeat: "initial"
+-                                 background-attachment: "initial"
+-                                 background-origin: "initial"
+-                                 background-clip: "initial"
+-                                 background-color: "rgb(192, 122, 74)"
+-                                 z-index: "2"
+                                }}
+                              >
+                              <span
+                                className="ember"
+                                style={{
++                                 left: "6.33328205427226%"
+-                                 left: "21.5545%"
++                                 bottom: "13.51138422377809%"
+-                                 bottom: "4.02328%"
++                                 width: "1.6814214726873302px"
+-                                 width: "4.2552px"
++                                 height: "1.6814214726873302px"
+-                                 height: "4.2552px"
++                                 background: "#C07A4A"
++                                 --duration: "7.56312595846383s"
+-                                 --duration: "7.062657762188951s"
++                                 --delay: "1.6977777796229345s"
+-                                 --delay: "0.3225276220987441s"
++                                 --drift: "1.4494392691304547px"
+-                                 --drift: "37.77866999502076px"
++                                 zIndex: 2
+-                                 background-image: "initial"
+-                                 background-position-x: "initial"
+-                                 background-position-y: "initial"
+-                                 background-size: "initial"
+-                                 background-repeat: "initial"
+-                                 background-attachment: "initial"
+-                                 background-origin: "initial"
+-                                 background-clip: "initial"
+-                                 background-color: "rgb(163, 98, 60)"
+-                                 z-index: "2"
+                                }}
+                              >
+                              <span
+                                className="ember"
+                                style={{
++                                 left: "35.79991898027658%"
+-                                 left: "98.255%"
++                                 bottom: "1.8274724060818381%"
+-                                 bottom: "0.0772222%"
++                                 width: "2.160809214072676px"
+-                                 width: "2.22221px"
++                                 height: "2.160809214072676px"
+-                                 height: "2.22221px"
++                                 background: "#A3623C"
++                                 --duration: "8.158558165746204s"
+-                                 --duration: "6.7715707755222985s"
++                                 --delay: "6.124313881245947s"
+-                                 --delay: "7.028350438436363s"
++                                 --drift: "-35.11554100995248px"
+-                                 --drift: "-20.323709639343733px"
++                                 zIndex: 2
+-                                 background-image: "initial"
+-                                 background-position-x: "initial"
+-                                 background-position-y: "initial"
+-                                 background-size: "initial"
+-                                 background-repeat: "initial"
+-                                 background-attachment: "initial"
+-                                 background-origin: "initial"
+-                                 background-clip: "initial"
+-                                 background-color: "rgb(163, 98, 60)"
+-                                 z-index: "2"
+                                }}
+                              >
+                              <span
+                                className="ember"
+                                style={{
++                                 left: "9.75757022456344%"
+-                                 left: "36.1848%"
++                                 bottom: "7.836180932718647%"
+-                                 bottom: "0.142539%"
++                                 width: "1.6885798905932607px"
+-                                 width: "2.718px"
++                                 height: "1.6885798905932607px"
+-                                 height: "2.718px"
++                                 background: "#A3623C"
++                                 --duration: "7.908079766352625s"
+-                                 --duration: "9.287139043759732s"
++                                 --delay: "5.241304202872606s"
+-                                 --delay: "1.9741801551054232s"
++                                 --drift: "3.156246002331562px"
+-                                 --drift: "10.243417360131133px"
++                                 zIndex: 2
+-                                 background-image: "initial"
+-                                 background-position-x: "initial"
+-                                 background-position-y: "initial"
+-                                 background-size: "initial"
+-                                 background-repeat: "initial"
+-                                 background-attachment: "initial"
+-                                 background-origin: "initial"
+-                                 background-clip: "initial"
+-                                 background-color: "rgb(192, 122, 74)"
+-                                 z-index: "2"
+                                }}
+                              >
+                              <span
+                                className="ember"
+                                style={{
++                                 left: "18.054278510140154%"
+-                                 left: "14.3275%"
++                                 bottom: "27.136352650641015%"
+-                                 bottom: "3.7415%"
++                                 width: "1.7876785895853078px"
+-                                 width: "4.0898px"
++                                 height: "1.7876785895853078px"
+-                                 height: "4.0898px"
++                                 background: "#A3623C"
++                                 --duration: "7.401823567625991s"
+-                                 --duration: "8.016718576595725s"
++                                 --delay: "5.638518715266531s"
+-                                 --delay: "0.7932427122077437s"
++                                 --drift: "-37.81310353475259px"
+-                                 --drift: "38.91729732478902px"
++                                 zIndex: 2
+-                                 background-image: "initial"
+-                                 background-position-x: "initial"
+-                                 background-position-y: "initial"
+-                                 background-size: "initial"
+-                                 background-repeat: "initial"
+-                                 background-attachment: "initial"
+-                                 background-origin: "initial"
+-                                 background-clip: "initial"
+-                                 background-color: "rgb(163, 98, 60)"
+-                                 z-index: "2"
+                                }}
+                              >
+                              <span
+                                className="ember"
+                                style={{
++                                 left: "73.69638958950132%"
+-                                 left: "95.01%"
++                                 bottom: "25.26631032449505%"
+-                                 bottom: "3.94679%"
++                                 width: "3.188141955151662px"
+-                                 width: "2.70268px"
++                                 height: "3.188141955151662px"
+-                                 height: "2.70268px"
++                                 background: "#A3623C"
++                                 --duration: "8.789635650627787s"
+-                                 --duration: "10.04661028191179s"
++                                 --delay: "6.278515373460846s"
+-                                 --delay: "2.3466939736800576s"
++                                 --drift: "23.319186073133853px"
+-                                 --drift: "-23.946097527299493px"
++                                 zIndex: 2
+-                                 background-image: "initial"
+-                                 background-position-x: "initial"
+-                                 background-position-y: "initial"
+-                                 background-size: "initial"
+-                                 background-repeat: "initial"
+-                                 background-attachment: "initial"
+-                                 background-origin: "initial"
+-                                 background-clip: "initial"
+-                                 background-color: "rgb(192, 122, 74)"
+-                                 z-index: "2"
+                                }}
+                              >
+                              <span
+                                className="ember"
+                                style={{
++                                 left: "15.63755148900966%"
+-                                 left: "59.199%"
++                                 bottom: "21.104508936084727%"
+-                                 bottom: "27.8183%"
++                                 width: "3.3351656416931883px"
+-                                 width: "3.11702px"
++                                 height: "3.3351656416931883px"
+-                                 height: "3.11702px"
++                                 background: "#A3623C"
++                                 --duration: "8.961117583757463s"
+-                                 --duration: "9.06648620530834s"
++                                 --delay: "6.463536983747629s"
+-                                 --delay: "2.4645179906218972s"
++                                 --drift: "9.671416482965363px"
+-                                 --drift: "20.68394785480491px"
++                                 zIndex: 2
+-                                 background-image: "initial"
+-                                 background-position-x: "initial"
+-                                 background-position-y: "initial"
+-                                 background-size: "initial"
+-                                 background-repeat: "initial"
+-                                 background-attachment: "initial"
+-                                 background-origin: "initial"
+-                                 background-clip: "initial"
+-                                 background-color: "rgb(192, 122, 74)"
+-                                 z-index: "2"
+                                }}
+                              >
+                              <span
+                                className="ember"
+                                style={{
++                                 left: "80.28646199984972%"
+-                                 left: "47.8781%"
++                                 bottom: "23.099037535010243%"
+-                                 bottom: "24.8649%"
++                                 width: "2.168837163369446px"
+-                                 width: "4.38591px"
++                                 height: "2.168837163369446px"
+-                                 height: "4.38591px"
++                                 background: "#C07A4A"
++                                 --duration: "6.350034963202218s"
+-                                 --duration: "8.984964751885304s"
++                                 --delay: "0.5210751896722643s"
+-                                 --delay: "6.104748365003307s"
++                                 --drift: "12.841253802625818px"
+-                                 --drift: "-9.415616672063933px"
++                                 zIndex: 2
+-                                 background-image: "initial"
+-                                 background-position-x: "initial"
+-                                 background-position-y: "initial"
+-                                 background-size: "initial"
+-                                 background-repeat: "initial"
+-                                 background-attachment: "initial"
+-                                 background-origin: "initial"
+-                                 background-clip: "initial"
+-                                 background-color: "rgb(163, 98, 60)"
+-                                 z-index: "2"
+                                }}
+                              >
+                              <span
+                                className="ember"
+                                style={{
++                                 left: "45.595376882448654%"
+-                                 left: "97.7737%"
++                                 bottom: "1.4861226669237548%"
+-                                 bottom: "24.3761%"
++                                 width: "2.5819770382190868px"
+-                                 width: "3.47238px"
++                                 height: "2.5819770382190868px"
+-                                 height: "3.47238px"
++                                 background: "#A3623C"
++                                 --duration: "7.546410635972988s"
+-                                 --duration: "5.157201406461809s"
++                                 --delay: "7.019896802232562s"
+-                                 --delay: "2.0192002594580654s"
++                                 --drift: "-7.412967264783861px"
+-                                 --drift: "6.443985205631577px"
++                                 zIndex: 2
+-                                 background-image: "initial"
+-                                 background-position-x: "initial"
+-                                 background-position-y: "initial"
+-                                 background-size: "initial"
+-                                 background-repeat: "initial"
+-                                 background-attachment: "initial"
+-                                 background-origin: "initial"
+-                                 background-clip: "initial"
+-                                 background-color: "rgb(163, 98, 60)"
+-                                 z-index: "2"
+                                }}
+                              >
+                              <span
+                                className="ember"
+                                style={{
++                                 left: "44.0291733874144%"
+-                                 left: "10.9568%"
++                                 bottom: "18.280049251265105%"
+-                                 bottom: "4.18222%"
++                                 width: "2.55517607727205px"
+-                                 width: "2.06365px"
++                                 height: "2.55517607727205px"
+-                                 height: "2.06365px"
++                                 background: "#C07A4A"
++                                 --duration: "10.416183699652283s"
+-                                 --duration: "8.942103910091967s"
++                                 --delay: "5.498242031454298s"
+-                                 --delay: "6.426313719005406s"
++                                 --drift: "11.646222012707161px"
+-                                 --drift: "4.610671227442786px"
++                                 zIndex: 2
+-                                 background-image: "initial"
+-                                 background-position-x: "initial"
+-                                 background-position-y: "initial"
+-                                 background-size: "initial"
+-                                 background-repeat: "initial"
+-                                 background-attachment: "initial"
+-                                 background-origin: "initial"
+-                                 background-clip: "initial"
+-                                 background-color: "rgb(163, 98, 60)"
+-                                 z-index: "2"
+                                }}
+                              >
+                              <span
+                                className="ember"
+                                style={{
++                                 left: "51.20017419955316%"
+-                                 left: "0.765912%"
++                                 bottom: "11.608686973167217%"
+-                                 bottom: "14.0177%"
++                                 width: "4.101613286103993px"
+-                                 width: "1.61554px"
++                                 height: "4.101613286103993px"
+-                                 height: "1.61554px"
++                                 background: "#C07A4A"
++                                 --duration: "7.437939052279299s"
+-                                 --duration: "7.125799520769737s"
++                                 --delay: "6.567103057717887s"
+-                                 --delay: "2.185183608987769s"
++                                 --drift: "-33.358785468102134px"
+-                                 --drift: "-21.18612157497659px"
++                                 zIndex: 2
+-                                 background-image: "initial"
+-                                 background-position-x: "initial"
+-                                 background-position-y: "initial"
+-                                 background-size: "initial"
+-                                 background-repeat: "initial"
+-                                 background-attachment: "initial"
+-                                 background-origin: "initial"
+-                                 background-clip: "initial"
+-                                 background-color: "rgb(192, 122, 74)"
+-                                 z-index: "2"
+                                }}
+                              >
+                              <span
+                                className="ember"
+                                style={{
++                                 left: "30.20331662761906%"
+-                                 left: "72.1187%"
++                                 bottom: "23.36289079168345%"
+-                                 bottom: "24.5581%"
++                                 width: "2.326373871228279px"
+-                                 width: "1.92361px"
++                                 height: "2.326373871228279px"
+-                                 height: "1.92361px"
++                                 background: "#C07A4A"
++                                 --duration: "8.557244368940365s"
+-                                 --duration: "8.67773228521959s"
++                                 --delay: "0.6029608171832859s"
+-                                 --delay: "7.649686142878255s"
++                                 --drift: "10.232474399653908px"
+-                                 --drift: "-0.990447217476289px"
++                                 zIndex: 2
+-                                 background-image: "initial"
+-                                 background-position-x: "initial"
+-                                 background-position-y: "initial"
+-                                 background-size: "initial"
+-                                 background-repeat: "initial"
+-                                 background-attachment: "initial"
+-                                 background-origin: "initial"
+-                                 background-clip: "initial"
+-                                 background-color: "rgb(192, 122, 74)"
+-                                 z-index: "2"
+                                }}
+                              >
+                              <span
+                                className="ember"
+                                style={{
++                                 left: "1.5796024808068854%"
+-                                 left: "63.7008%"
++                                 bottom: "11.454117649232185%"
+-                                 bottom: "3.67489%"
++                                 width: "4.170888849926558px"
+-                                 width: "3.61758px"
++                                 height: "4.170888849926558px"
+-                                 height: "3.61758px"
++                                 background: "#C07A4A"
++                                 --duration: "10.389435810091106s"
+-                                 --duration: "6.953157404640205s"
++                                 --delay: "3.625754900296659s"
+-                                 --delay: "2.274120983251768s"
++                                 --drift: "-14.934871283700533px"
+-                                 --drift: "37.326697591086415px"
++                                 zIndex: 2
+-                                 background-image: "initial"
+-                                 background-position-x: "initial"
+-                                 background-position-y: "initial"
+-                                 background-size: "initial"
+-                                 background-repeat: "initial"
+-                                 background-attachment: "initial"
+-                                 background-origin: "initial"
+-                                 background-clip: "initial"
+-                                 background-color: "rgb(163, 98, 60)"
+-                                 z-index: "2"
+                                }}
+                              >
+                              <span
+                                className="ember"
+                                style={{
++                                 left: "60.37990709179021%"
+-                                 left: "57.0195%"
++                                 bottom: "19.45387095825562%"
+-                                 bottom: "10.5482%"
++                                 width: "2.914545595704938px"
+-                                 width: "3.75336px"
++                                 height: "2.914545595704938px"
+-                                 height: "3.75336px"
++                                 background: "#A3623C"
++                                 --duration: "5.620257369407852s"
+-                                 --duration: "5.433679962884851s"
++                                 --delay: "1.8028651217601475s"
+-                                 --delay: "0.3384560052844465s"
++                                 --drift: "-14.851343007628488px"
+-                                 --drift: "37.48594223058224px"
++                                 zIndex: 2
+-                                 background-image: "initial"
+-                                 background-position-x: "initial"
+-                                 background-position-y: "initial"
+-                                 background-size: "initial"
+-                                 background-repeat: "initial"
+-                                 background-attachment: "initial"
+-                                 background-origin: "initial"
+-                                 background-clip: "initial"
+-                                 background-color: "rgb(192, 122, 74)"
+-                                 z-index: "2"
+                                }}
+                              >
+                              <span
+                                className="ember"
+                                style={{
++                                 left: "82.03610550863894%"
+-                                 left: "82.3374%"
++                                 bottom: "20.64244664356522%"
+-                                 bottom: "27.6678%"
++                                 width: "4.359175815384283px"
+-                                 width: "2.11429px"
++                                 height: "4.359175815384283px"
+-                                 height: "2.11429px"
++                                 background: "#A3623C"
++                                 --duration: "9.393848723642774s"
+-                                 --duration: "10.833047242570576s"
++                                 --delay: "5.329306019396244s"
+-                                 --delay: "2.3294806703964426s"
++                                 --drift: "-34.842277632566905px"
+-                                 --drift: "25.584396262066022px"
++                                 zIndex: 2
+-                                 background-image: "initial"
+-                                 background-position-x: "initial"
+-                                 background-position-y: "initial"
+-                                 background-size: "initial"
+-                                 background-repeat: "initial"
+-                                 background-attachment: "initial"
+-                                 background-origin: "initial"
+-                                 background-clip: "initial"
+-                                 background-color: "rgb(192, 122, 74)"
+-                                 z-index: "2"
+                                }}
+                              >
+                              <span
+                                className="ember"
+                                style={{
++                                 left: "61.61101891311529%"
+-                                 left: "30.6744%"
++                                 bottom: "19.022193893791794%"
+-                                 bottom: "4.0745%"
++                                 width: "2.6281533438064315px"
+-                                 width: "2.2861px"
++                                 height: "2.6281533438064315px"
+-                                 height: "2.2861px"
++                                 background: "#C07A4A"
++                                 --duration: "9.32241203105651s"
+-                                 --duration: "10.505755813491366s"
++                                 --delay: "6.601011838594348s"
+-                                 --delay: "0.9608065756560151s"
++                                 --drift: "-26.2667840307323px"
+-                                 --drift: "-14.828179893684643px"
++                                 zIndex: 2
+-                                 background-image: "initial"
+-                                 background-position-x: "initial"
+-                                 background-position-y: "initial"
+-                                 background-size: "initial"
+-                                 background-repeat: "initial"
+-                                 background-attachment: "initial"
+-                                 background-origin: "initial"
+-                                 background-clip: "initial"
+-                                 background-color: "rgb(192, 122, 74)"
+-                                 z-index: "2"
+                                }}
+                              >
+                              <span
+                                className="ember"
+                                style={{
++                                 left: "5.406339857944409%"
+-                                 left: "94.6336%"
++                                 bottom: "16.57616003965343%"
+-                                 bottom: "19.7466%"
++                                 width: "3.2073737131770117px"
+-                                 width: "1.59397px"
++                                 height: "3.2073737131770117px"
+-                                 height: "1.59397px"
++                                 background: "#C07A4A"
++                                 --duration: "9.846496853449716s"
+-                                 --duration: "5.997473864004844s"
++                                 --delay: "5.402254520582754s"
+-                                 --delay: "3.489686299584286s"
++                                 --drift: "-1.9525631299874835px"
+-                                 --drift: "35.45229629936695px"
++                                 zIndex: 2
+-                                 background-image: "initial"
+-                                 background-position-x: "initial"
+-                                 background-position-y: "initial"
+-                                 background-size: "initial"
+-                                 background-repeat: "initial"
+-                                 background-attachment: "initial"
+-                                 background-origin: "initial"
+-                                 background-clip: "initial"
+-                                 background-color: "rgb(163, 98, 60)"
+-                                 z-index: "2"
+                                }}
+                              >
+                              <span
+                                className="ember"
+                                style={{
++                                 left: "92.6752311556661%"
+-                                 left: "4.02787%"
++                                 bottom: "28.034989756902206%"
+-                                 bottom: "2.56291%"
++                                 width: "2.3078624833609283px"
+-                                 width: "2.90469px"
++                                 height: "2.3078624833609283px"
+-                                 height: "2.90469px"
++                                 background: "#C07A4A"
++                                 --duration: "7.333589718952084s"
+-                                 --duration: "9.858614690523542s"
++                                 --delay: "1.542104618281945s"
+-                                 --delay: "7.240608569752186s"
++                                 --drift: "-9.48850111465008px"
+-                                 --drift: "8.03307240053229px"
++                                 zIndex: 2
+-                                 background-image: "initial"
+-                                 background-position-x: "initial"
+-                                 background-position-y: "initial"
+-                                 background-size: "initial"
+-                                 background-repeat: "initial"
+-                                 background-attachment: "initial"
+-                                 background-origin: "initial"
+-                                 background-clip: "initial"
+-                                 background-color: "rgb(163, 98, 60)"
+-                                 z-index: "2"
+                                }}
+                              >
+                              <span
+                                className="ember"
+                                style={{
++                                 left: "95.82581778813261%"
+-                                 left: "29.9225%"
++                                 bottom: "28.716848267958316%"
+-                                 bottom: "14.2537%"
++                                 width: "4.349957547229674px"
+-                                 width: "3.69937px"
++                                 height: "4.349957547229674px"
+-                                 height: "3.69937px"
++                                 background: "#C07A4A"
++                                 --duration: "10.439896872127331s"
+-                                 --duration: "10.7976070940065s"
++                                 --delay: "3.329255619533324s"
+-                                 --delay: "0.8072646451988472s"
++                                 --drift: "6.270801475879004px"
+-                                 --drift: "9.534687401455457px"
++                                 zIndex: 2
+-                                 background-image: "initial"
+-                                 background-position-x: "initial"
+-                                 background-position-y: "initial"
+-                                 background-size: "initial"
+-                                 background-repeat: "initial"
+-                                 background-attachment: "initial"
+-                                 background-origin: "initial"
+-                                 background-clip: "initial"
+-                                 background-color: "rgb(163, 98, 60)"
+-                                 z-index: "2"
+                                }}
+                              >
+                              <span
+                                className="ember"
+                                style={{
++                                 left: "93.81172885390265%"
+-                                 left: "37.6702%"
++                                 bottom: "9.260813634597332%"
+-                                 bottom: "16.1693%"
++                                 width: "3.165690666127635px"
+-                                 width: "4.13151px"
++                                 height: "3.165690666127635px"
+-                                 height: "4.13151px"
++                                 background: "#C07A4A"
++                                 --duration: "8.055897471280952s"
+-                                 --duration: "5.129341429863141s"
++                                 --delay: "1.3133365706291604s"
+-                                 --delay: "2.210494651325975s"
++                                 --drift: "4.247836691330358px"
+-                                 --drift: "-17.41174655254212px"
++                                 zIndex: 2
+-                                 background-image: "initial"
+-                                 background-position-x: "initial"
+-                                 background-position-y: "initial"
+-                                 background-size: "initial"
+-                                 background-repeat: "initial"
+-                                 background-attachment: "initial"
+-                                 background-origin: "initial"
+-                                 background-clip: "initial"
+-                                 background-color: "rgb(192, 122, 74)"
+-                                 z-index: "2"
+                                }}
+                              >
+                              <span
+                                className="ember"
+                                style={{
++                                 left: "25.528842803239794%"
+-                                 left: "87.6618%"
++                                 bottom: "2.400569550611346%"
+-                                 bottom: "3.47468%"
++                                 width: "2.568984133448093px"
+-                                 width: "2.17849px"
++                                 height: "2.568984133448093px"
+-                                 height: "2.17849px"
++                                 background: "#C07A4A"
++                                 --duration: "8.859784150640156s"
+-                                 --duration: "6.574848088986261s"
++                                 --delay: "4.591886790566514s"
+-                                 --delay: "5.9346254141429355s"
++                                 --drift: "-10.131354903167997px"
+-                                 --drift: "-16.591237031104935px"
++                                 zIndex: 2
+-                                 background-image: "initial"
+-                                 background-position-x: "initial"
+-                                 background-position-y: "initial"
+-                                 background-size: "initial"
+-                                 background-repeat: "initial"
+-                                 background-attachment: "initial"
+-                                 background-origin: "initial"
+-                                 background-clip: "initial"
+-                                 background-color: "rgb(163, 98, 60)"
+-                                 z-index: "2"
+                                }}
+                              >
+                              <span
+                                className="ember"
+                                style={{
++                                 left: "13.341589646656304%"
+-                                 left: "92.9761%"
++                                 bottom: "26.36983831493589%"
+-                                 bottom: "17.832%"
++                                 width: "1.8351639633132597px"
+-                                 width: "3.7427px"
++                                 height: "1.8351639633132597px"
+-                                 height: "3.7427px"
++                                 background: "#A3623C"
++                                 --duration: "5.211712617768313s"
+-                                 --duration: "6.912996862554271s"
++                                 --delay: "0.08328232804328284s"
+-                                 --delay: "0.10850136552277245s"
++                                 --drift: "32.50359588697567px"
+-                                 --drift: "23.19018933261728px"
++                                 zIndex: 2
+-                                 background-image: "initial"
+-                                 background-position-x: "initial"
+-                                 background-position-y: "initial"
+-                                 background-size: "initial"
+-                                 background-repeat: "initial"
+-                                 background-attachment: "initial"
+-                                 background-origin: "initial"
+-                                 background-clip: "initial"
+-                                 background-color: "rgb(192, 122, 74)"
+-                                 z-index: "2"
+                                }}
+                              >
+                              <span
+                                className="ember"
+                                style={{
++                                 left: "43.22838382433377%"
+-                                 left: "12.7532%"
++                                 bottom: "21.867845199408638%"
+-                                 bottom: "0.152987%"
++                                 width: "2.5541527709130794px"
+-                                 width: "3.4422px"
++                                 height: "2.5541527709130794px"
+-                                 height: "3.4422px"
++                                 background: "#A3623C"
++                                 --duration: "7.356954176314148s"
+-                                 --duration: "9.345639311553517s"
++                                 --delay: "6.749990260637165s"
+-                                 --delay: "0.8076410481324663s"
++                                 --drift: "-20.842067967005935px"
+-                                 --drift: "-6.63499077941653px"
++                                 zIndex: 2
+-                                 background-image: "initial"
+-                                 background-position-x: "initial"
+-                                 background-position-y: "initial"
+-                                 background-size: "initial"
+-                                 background-repeat: "initial"
+-                                 background-attachment: "initial"
+-                                 background-origin: "initial"
+-                                 background-clip: "initial"
+-                                 background-color: "rgb(163, 98, 60)"
+-                                 z-index: "2"
+                                }}
+                              >
+                              <span
+                                className="ember"
+                                style={{
++                                 left: "53.74844160860046%"
+-                                 left: "23.9788%"
++                                 bottom: "8.677914242667882%"
+-                                 bottom: "11.4949%"
++                                 width: "2.258886157847617px"
+-                                 width: "3.38978px"
++                                 height: "2.258886157847617px"
+-                                 height: "3.38978px"
++                                 background: "#A3623C"
++                                 --duration: "5.897441966647325s"
+-                                 --duration: "10.221789681218594s"
++                                 --delay: "4.449766624402492s"
+-                                 --delay: "7.942239290800285s"
++                                 --drift: "-15.900686685530943px"
+-                                 --drift: "24.980315529211722px"
++                                 zIndex: 2
+-                                 background-image: "initial"
+-                                 background-position-x: "initial"
+-                                 background-position-y: "initial"
+-                                 background-size: "initial"
+-                                 background-repeat: "initial"
+-                                 background-attachment: "initial"
+-                                 background-origin: "initial"
+-                                 background-clip: "initial"
+-                                 background-color: "rgb(192, 122, 74)"
+-                                 z-index: "2"
+                                }}
+                              >
+                              <span
+                                className="ember"
+                                style={{
++                                 left: "28.894254699763376%"
+-                                 left: "74.7708%"
++                                 bottom: "11.344610665643827%"
+-                                 bottom: "21.4802%"
++                                 width: "4.2833376485353485px"
+-                                 width: "3.24642px"
++                                 height: "4.2833376485353485px"
+-                                 height: "3.24642px"
++                                 background: "#A3623C"
++                                 --duration: "10.563069850981401s"
+-                                 --duration: "9.686185286557476s"
++                                 --delay: "2.2495029907048814s"
+-                                 --delay: "4.30557237265248s"
++                                 --drift: "34.434171782318px"
+-                                 --drift: "-28.041683120684652px"
++                                 zIndex: 2
+-                                 background-image: "initial"
+-                                 background-position-x: "initial"
+-                                 background-position-y: "initial"
+-                                 background-size: "initial"
+-                                 background-repeat: "initial"
+-                                 background-attachment: "initial"
+-                                 background-origin: "initial"
+-                                 background-clip: "initial"
+-                                 background-color: "rgb(163, 98, 60)"
+-                                 z-index: "2"
+                                }}
+                              >
+                              ...
+                          ...
+                    ...
+                  ...
+      ...
+
