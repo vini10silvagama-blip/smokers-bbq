@@ -1,5 +1,6 @@
 'use client'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 const fade = (delay = 0) => ({ initial: { opacity: 0, y: 30 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.8, delay } })
 
@@ -19,13 +20,13 @@ export default function Hero() {
     <section id="hero" className="relative flex items-center overflow-hidden" style={{ minHeight: '100vh', background: '#0A0806', paddingTop: '72px' }}>
 
       {/* Vídeo desktop */}
-      <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover hidden md:block">
+      <video autoPlay muted loop playsInline preload="metadata" className="absolute inset-0 w-full h-full object-cover hidden md:block">
         <source src="/HERO VIDEO OTIMIZADO - DESKTOP.mp4" type="video/mp4" />
       </video>
-      {/* Vídeo mobile */}
-      <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover md:hidden">
-        <source src="/HERO VIDEO OTIMIZADO - MOBILE.mp4" type="video/mp4" />
-      </video>
+      {/* Imagem estática mobile (mais rápido que vídeo em 4G) */}
+      <div className="absolute inset-0 md:hidden">
+        <Image src="/imagem pit smoker - smokers bbq.png" alt="" fill priority sizes="100vw" style={{ objectFit: 'cover', objectPosition: 'center' }} />
+      </div>
 
       <div className="absolute inset-0" style={{ background: 'rgba(10,8,6,0.65)' }} />
 
@@ -58,10 +59,10 @@ export default function Hero() {
         </motion.div>
 
         <motion.h1 {...fade(0.2)} style={{ fontFamily: 'Oswald, sans-serif', fontSize: 'clamp(36px, 6vw, 80px)', fontWeight: 700, lineHeight: 1.0, textTransform: 'uppercase', color: '#F0E8D8', marginBottom: '24px' }}>
-          O Legítimo<br />
-          <span style={{ color: '#A3623C' }}>American BBQ.</span><br />
-          Sem Fumaça, Sem Caos,<br />
-          <span style={{ color: '#A3623C' }}>Apenas Lucro.</span>
+          O Autêntico<br />
+          <span style={{ color: '#A3623C' }}>American BBQ</span><br />
+          Para o Seu<br />
+          <span style={{ color: '#A3623C' }}>Negócio.</span>
         </motion.h1>
 
         <motion.p {...fade(0.4)} style={{ fontSize: 'clamp(15px, 2vw, 18px)', fontWeight: 400, color: '#B8AD9E', maxWidth: '580px', marginBottom: '40px', lineHeight: 1.8 }}>

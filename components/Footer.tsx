@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="dotted-divider" style={{ marginBottom: '32px' }} />
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
           <div>
-            <img src="/logo marrom transparente - smokers bbq.png" alt="Smokers BBQ" style={{ height: '40px', width: 'auto', display: 'block', marginBottom: '4px' }} />
+            <img src="/logo marrom transparente - smokers bbq.png" alt="Smokers BBQ" style={{ height: '60px', width: 'auto', display: 'block', marginBottom: '4px' }} />
             <div style={{ fontSize: '9px', fontWeight: 700, letterSpacing: '0.3em', textTransform: 'uppercase', color: '#A3623C' }}>Carnes Defumadas · São Paulo, Brasil</div>
           </div>
           <p style={{ fontSize: '13px', color: 'rgba(184,173,158,0.5)' }}>© 2026 Smokers BBQ. Todos os direitos reservados.</p>

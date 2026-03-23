@@ -1,5 +1,6 @@
 'use client'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 const reveal = (delay = 0) => ({ initial: { opacity: 0, y: 40 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true }, transition: { duration: 0.7, delay } })
 
@@ -12,7 +13,7 @@ export default function Sobre() {
           <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}
             className="relative order-2 lg:order-1" style={{ height: 'clamp(300px,40vw,480px)' }}>
             <div style={{ position: 'absolute', top: 0, left: 0, right: '40px', bottom: '40px', overflow: 'hidden' }}>
-              <img src="/imagem pit smoker - smokers bbq.png" alt="Pit Smoker Smokers BBQ" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+              <Image src="/imagem pit smoker - smokers bbq.png" alt="Pit Smoker Smokers BBQ" fill sizes="(max-width: 1024px) 100vw, 50vw" style={{ objectFit: 'cover' }} />
             </div>
             <div style={{ position: 'absolute', bottom: 0, right: 0, width: '160px', height: '160px', background: 'rgba(163,98,60,0.08)', border: '1px solid rgba(163,98,60,0.25)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px', textAlign: 'center' }}>
               <p style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic', fontSize: '13px', color: '#C07A4A', lineHeight: 1.5 }}>"A paciência do Low & Slow. A busca pela mordida perfeita."</p>

@@ -1,5 +1,6 @@
 'use client'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 const reveal = (delay = 0) => ({ initial: { opacity: 0, y: 40 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true }, transition: { duration: 0.7, delay } })
 
@@ -37,10 +38,10 @@ export default function Produtos() {
               style={{ background: '#110E0B', padding: 'clamp(28px,4vw,40px) clamp(20px,3vw,32px)', position: 'relative', overflow: 'hidden', transition: 'background 0.3s', cursor: 'default' }}
               onMouseEnter={e => (e.currentTarget.style.background = '#1A1410')}
               onMouseLeave={e => (e.currentTarget.style.background = '#110E0B')}>
-              <div style={{ width: '100%', height: '200px', overflow: 'hidden', marginBottom: '20px' }}>
-                <img src={p.img} alt={p.nome} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', transition: 'transform 0.5s ease' }}
-                  onMouseEnter={e => (e.currentTarget.style.transform = 'scale(1.07)')}
-                  onMouseLeave={e => (e.currentTarget.style.transform = 'scale(1)')} />
+              <div style={{ width: '100%', height: '200px', overflow: 'hidden', marginBottom: '20px', position: 'relative' }}>
+                <Image src={p.img} alt={p.nome} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" style={{ objectFit: 'cover', transition: 'transform 0.5s ease' }}
+                  onMouseEnter={e => ((e.target as HTMLElement).style.transform = 'scale(1.07)')}
+                  onMouseLeave={e => ((e.target as HTMLElement).style.transform = 'scale(1)')} />
               </div>
               <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#A3623C', marginBottom: '12px' }}>{p.tag}</div>
               <div style={{ fontFamily: 'Oswald, sans-serif', fontSize: '22px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#F0E8D8', marginBottom: '16px' }}>{p.nome}</div>
