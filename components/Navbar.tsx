@@ -34,7 +34,7 @@ export default function Navbar() {
       }}
     >
       <a href="#hero" style={{ textDecoration: 'none' }}>
-        <img src="/logo branca transparente - smokers bbq.png" alt="Smokers BBQ" style={{ height: '48px', width: 'auto', display: 'block' }} />
+        <img src="/logo marrom transparente - smokers bbq.png" alt="Smokers BBQ" style={{ height: '48px', width: 'auto', display: 'block' }} />
       </a>
 
       {/* Desktop nav */}

@@ -17,7 +17,7 @@ export default function Solucao() {
         <motion.h2 {...reveal} style={{ fontFamily: 'Oswald, sans-serif', fontSize: 'clamp(24px,4vw,48px)', fontWeight: 700, textTransform: 'uppercase', lineHeight: 1.1, maxWidth: '780px', marginBottom: '20px' }}>
           Cozinha Lotada? Falta de <span style={{ color: '#A3623C' }}>Mão de Obra?</span> Desperdício de Insumos?
         </motion.h2>
-        <motion.p {...reveal} style={{ fontSize: 'clamp(16px,2vw,20px)', fontWeight: 300, color: '#B8AD9E', marginBottom: '48px', maxWidth: '600px' }}>
+        <motion.p {...reveal} style={{ fontSize: 'clamp(16px,2vw,20px)', fontWeight: 400, color: '#B8AD9E', marginBottom: '48px', maxWidth: '600px' }}>
           Infelizmente o American BBQ não estava ao alcance de Bares e Restaurantes — pela complexidade de produção. <strong style={{ color: '#A3623C', fontWeight: 700 }}>A Smokers BBQ chega para resolver este problema.</strong>
         </motion.p>
 
