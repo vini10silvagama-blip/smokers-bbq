@@ -23,10 +23,10 @@ export default function Hero() {
       <video autoPlay muted loop playsInline preload="metadata" className="absolute inset-0 w-full h-full object-cover hidden md:block">
         <source src="/HERO VIDEO OTIMIZADO - DESKTOP.mp4" type="video/mp4" />
       </video>
-      {/* Imagem estática mobile (mais rápido que vídeo em 4G) */}
-      <div className="absolute inset-0 md:hidden">
-        <Image src="/imagem pit smoker - smokers bbq.png" alt="" fill priority sizes="100vw" style={{ objectFit: 'cover', objectPosition: 'center' }} />
-      </div>
+      {/* Vídeo mobile */}
+      <video autoPlay muted loop playsInline preload="metadata" className="absolute inset-0 w-full h-full object-cover md:hidden">
+        <source src="/HERO VIDEO OTIMIZADO - MOBILE.mp4" type="video/mp4" />
+      </video>
 
       <div className="absolute inset-0" style={{ background: 'rgba(10,8,6,0.65)' }} />
 
