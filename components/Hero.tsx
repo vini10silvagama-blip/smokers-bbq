@@ -1,6 +1,5 @@
 'use client'
 import { motion } from 'framer-motion'
-import Image from 'next/image'
 
 const fade = (delay = 0) => ({ initial: { opacity: 0, y: 30 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.8, delay } })
 
@@ -53,7 +52,7 @@ export default function Hero() {
       </svg>
 
       <div className="relative z-10 w-full" style={{ maxWidth: '1160px', margin: '0 auto', padding: 'clamp(80px,12vh,120px) 20px clamp(48px,6vh,80px)' }}>
-        <motion.div {...fade(0)} className="inline-flex items-center gap-2 mb-8" style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#A3623C', border: '1px solid rgba(163,98,60,0.4)', padding: '8px 18px' }}>
+        <motion.div {...fade(0)} className="inline-flex items-center gap-2 mb-8" style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#A3623C', padding: '8px 0' }}>
           <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#A3623C', display: 'inline-block' }} />
           American BBQ Premium · São Paulo, Brasil
         </motion.div>
@@ -71,11 +70,11 @@ export default function Hero() {
 
         <motion.div {...fade(0.6)} className="flex flex-wrap gap-3 mb-16">
           <a href="#contato" style={{ fontFamily: 'Oswald, sans-serif', fontSize: '13px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#0A0806', background: '#A3623C', padding: '14px 28px', textDecoration: 'none', clipPath: 'polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%)' }}>Quero uma Degustação Técnica</a>
-          <a href="#parceria" style={{ fontFamily: 'Oswald, sans-serif', fontSize: '13px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#F0E8D8', background: 'transparent', border: '1px solid rgba(240,232,216,0.35)', padding: '14px 28px', textDecoration: 'none', clipPath: 'polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%)' }}>Ver Parceria B2B</a>
+          <a href="#produtos" style={{ fontFamily: 'Oswald, sans-serif', fontSize: '13px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#F0E8D8', background: 'transparent', border: '1px solid rgba(240,232,216,0.35)', padding: '14px 28px', textDecoration: 'none', clipPath: 'polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%)' }}>Conheça Nosso Cardápio</a>
         </motion.div>
 
         <motion.div {...fade(0.8)} className="grid grid-cols-3 gap-4" style={{ maxWidth: '400px' }}>
-          {[['7+','Anos de Expertise'],['12h','Defumação Lenta'],['60%+','Margem Bruta']].map(([num, label]) => (
+          {[['7+','Anos de Expertise'],['100%','Carne Premium'],['+40','Clientes Atendidos']].map(([num, label]) => (
             <div key={label} style={{ textAlign: 'center' }}>
               <div style={{ fontFamily: 'Oswald, sans-serif', fontSize: 'clamp(28px,4vw,36px)', fontWeight: 700, color: '#A3623C', lineHeight: 1 }}>{num}</div>
               <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase', color: '#B8AD9E', marginTop: '4px' }}>{label}</div>

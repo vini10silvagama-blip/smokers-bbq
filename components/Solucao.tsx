@@ -1,5 +1,6 @@
 'use client'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 const reveal = { initial: { opacity: 0, y: 40 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true }, transition: { duration: 0.7 } }
 
@@ -14,12 +15,27 @@ export default function Solucao() {
     <section id="solucao" style={{ background: '#110E0B', padding: 'clamp(64px,8vw,112px) 0' }}>
       <div style={{ maxWidth: '1160px', margin: '0 auto', padding: '0 20px' }}>
         <motion.div {...reveal} className="section-label">O Problema do Mercado</motion.div>
-        <motion.h2 {...reveal} style={{ fontFamily: 'Oswald, sans-serif', fontSize: 'clamp(24px,4vw,48px)', fontWeight: 700, textTransform: 'uppercase', lineHeight: 1.1, maxWidth: '780px', marginBottom: '20px' }}>
-          Cozinha Lotada? Falta de <span style={{ color: '#A3623C' }}>Mão de Obra?</span> Desperdício de Insumos?
-        </motion.h2>
-        <motion.p {...reveal} style={{ fontSize: 'clamp(16px,2vw,20px)', fontWeight: 400, color: '#B8AD9E', marginBottom: '48px', maxWidth: '600px' }}>
-          Infelizmente o American BBQ não estava ao alcance de Bares e Restaurantes — pela complexidade de produção. <strong style={{ color: '#A3623C', fontWeight: 700 }}>A Smokers BBQ chega para resolver este problema.</strong>
-        </motion.p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-center mb-16 md:mb-20">
+          <motion.div {...reveal} className="relative w-full" style={{ aspectRatio: '4/5', maxHeight: '560px' }}>
+            <Image
+              src="/imagem pit smoker - smokers bbq.png"
+              alt="Pit smoker Smokers BBQ"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              style={{ objectFit: 'cover' }}
+            />
+          </motion.div>
+
+          <div>
+            <motion.h2 {...reveal} style={{ fontFamily: 'Oswald, sans-serif', fontSize: 'clamp(24px,3.4vw,44px)', fontWeight: 700, textTransform: 'uppercase', lineHeight: 1.1, marginBottom: '24px' }}>
+              Ofereça churrasco defumado <span style={{ color: '#A3623C' }}>de verdade</span>, sem estrutura, sem equipe e sem complicação.
+            </motion.h2>
+            <motion.p {...reveal} style={{ fontSize: 'clamp(15px,1.4vw,17px)', fontWeight: 400, color: '#B8AD9E', lineHeight: 1.8 }}>
+              A Smokers BBQ oferece a solução completa para você. Produzir um American BBQ de verdade exige tempo, técnica, equipamentos e uma equipe especializada — cenário que não é a realidade da maioria dos bares e restaurantes. Foi pensando nisso que criamos uma solução inteligente: carnes defumadas no pitmaster, prontas para finalização. Você elimina a complexidade da produção, reduz desperdícios, não precisa investir em equipamentos ou mão de obra especializada, e ainda oferece um produto premium, pronto em 5 minutos, com sabor autêntico e padrão constante. <strong style={{ color: '#A3623C', fontWeight: 700 }}>Assim, sua cozinha ganha eficiência, seu cardápio ganha valor e seu negócio ganha escala.</strong>
+            </motion.p>
+          </div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-[2px] mb-12">
           {cards.map((card, i) => (

@@ -46,7 +46,7 @@ export default function Navbar() {
         ))}
       </ul>
 
-      <a href="#contato" className="hidden md:inline-block" style={{ fontFamily: 'Oswald, sans-serif', fontSize: '13px', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#0A0806', background: '#A3623C', padding: '10px 22px', textDecoration: 'none', clipPath: 'polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%)' }}>Degustação</a>
+      <a href="#contato" className="hidden md:inline-block" style={{ fontFamily: 'Oswald, sans-serif', fontSize: '12px', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#0A0806', background: '#A3623C', padding: '9px 18px', textDecoration: 'none', clipPath: 'polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%)', whiteSpace: 'nowrap' }}>Agende Sua Degustação</a>
 
       {/* Hamburger button */}
       <button
@@ -80,7 +80,7 @@ export default function Navbar() {
             onClick={() => setOpen(false)}
             style={{ fontFamily: 'Oswald, sans-serif', fontSize: '13px', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#0A0806', background: '#A3623C', padding: '14px 24px', textDecoration: 'none', margin: '12px 24px 4px', clipPath: 'polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%)', textAlign: 'center' }}
           >
-            Degustação
+            Agende Sua Degustação
           </a>
         </div>
       )}
