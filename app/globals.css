@@ -75,6 +75,25 @@ body::before {
   pointer-events: none;
 }
 
+@keyframes steam-rise {
+  0%   { transform: translateY(0) scale(0.8); opacity: 0; }
+  15%  { opacity: 0.55; }
+  60%  { opacity: 0.35; }
+  100% { transform: translateY(-140px) scale(2.2); opacity: 0; }
+}
+.steam {
+  position: absolute;
+  top: 8%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(240,232,216,0.55), rgba(240,232,216,0) 70%);
+  filter: blur(14px);
+  animation: steam-rise 5s infinite ease-out;
+  pointer-events: none;
+  z-index: 3;
+}
+
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--black); }
 ::-webkit-scrollbar-thumb { background: var(--copper); border-radius: 3px; }

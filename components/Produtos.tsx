@@ -28,7 +28,7 @@ export default function Produtos() {
         <motion.h2 {...reveal(0.1)} style={{ fontFamily: 'Oswald, sans-serif', fontSize: 'clamp(28px,4vw,52px)', fontWeight: 700, textTransform: 'uppercase', lineHeight: 1.1, marginBottom: '12px' }}>
           Nosso Cardápio de <span style={{ color: '#A3623C' }}>Elite</span>
         </motion.h2>
-        <motion.p {...reveal(0.2)} style={{ fontSize: '17px', color: '#B8AD9E', marginBottom: '48px', maxWidth: '560px' }}>
+        <motion.p {...reveal(0.2)} className="md:whitespace-nowrap" style={{ fontSize: '17px', color: '#B8AD9E', marginBottom: '48px' }}>
           As melhores opções de defumados que se encaixam nos mais variados cardápios.
         </motion.p>
 
