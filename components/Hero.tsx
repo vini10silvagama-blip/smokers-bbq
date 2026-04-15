@@ -44,15 +44,8 @@ export default function Hero() {
         } as React.CSSProperties} />
       ))}
 
-      <svg className="absolute right-0 top-0 hidden md:block" style={{ width: '55%', height: '100%', opacity: 0.06, pointerEvents: 'none' }} viewBox="0 0 600 800" preserveAspectRatio="xMidYMid slice">
-        <path d="M100,800 Q120,600 80,400 Q60,200 100,0" stroke="#A3623C" strokeWidth="1" fill="none"/>
-        <path d="M200,800 Q240,580 190,360 Q150,140 200,0" stroke="#A3623C" strokeWidth="0.5" fill="none"/>
-        <path d="M320,800 Q350,600 300,380 Q260,160 320,0" stroke="#A37533" strokeWidth="0.8" fill="none"/>
-        <path d="M430,800 Q460,620 420,400 Q380,180 430,0" stroke="#A3623C" strokeWidth="0.4" fill="none"/>
-      </svg>
-
-      <div className="relative z-10 w-full" style={{ maxWidth: '1160px', margin: '0 auto', padding: 'clamp(80px,12vh,120px) 20px clamp(48px,6vh,80px)' }}>
-        <motion.div {...fade(0)} className="inline-flex items-center gap-2 mb-8" style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#A3623C', padding: '8px 0' }}>
+<div className="relative z-10 w-full" style={{ maxWidth: '1160px', margin: '0 auto', padding: 'clamp(80px,12vh,120px) 20px clamp(48px,6vh,80px)' }}>
+        <motion.div {...fade(0)} className="inline-flex items-center gap-2 mb-8" style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#A3623C', border: '1px solid rgba(163,98,60,0.4)', padding: '8px 18px' }}>
           <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#A3623C', display: 'inline-block' }} />
           American BBQ Premium · São Paulo, Brasil
         </motion.div>
