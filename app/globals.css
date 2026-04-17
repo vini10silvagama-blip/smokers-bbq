@@ -98,3 +98,6 @@ body::before {
 ::-webkit-scrollbar-track { background: var(--black); }
 ::-webkit-scrollbar-thumb { background: var(--copper); border-radius: 3px; }
 ::selection { background: var(--copper); color: var(--black); }
+
+.carousel-scroll { scrollbar-width: none; -ms-overflow-style: none; }
+.carousel-scroll::-webkit-scrollbar { display: none; }
