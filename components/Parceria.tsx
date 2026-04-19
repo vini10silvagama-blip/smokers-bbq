@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 const reveal = (delay = 0) => ({ initial: { opacity: 0, y: 40 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true }, transition: { duration: 0.7, delay } })
 
-const metrics = [['60%+','Margem Bruta'],['5min','Para Servir'],['R$0','Em Equipamentos'],['100%','Suporte Técnico']]
+const metrics = [['Alta','Margem Bruta'],['5min','Para Servir'],['R$0','Em Equipamentos'],['100%','Suporte Técnico']]
 const benefits = [
   { title: 'Eficiência Máxima', text: 'Proteínas seladas a vácuo e porcionadas. Do estoque ao prato em 5 minutos. Plug & Play.' },
   { title: 'Padronização Total', text: 'O mesmo sabor e suculência em todos os turnos. Sem variação, sem surpresas.' },
@@ -61,8 +61,20 @@ export default function Parceria() {
 
             <motion.div {...reveal(0.5)} style={{ background: '#110E0B', border: '1px solid rgba(163,117,51,0.25)', padding: '32px', position: 'relative' }}>
               <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '2px', background: 'linear-gradient(90deg,#A3623C,#A37533)' }} />
-              <div style={{ fontFamily: 'Oswald, sans-serif', fontSize: '14px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.1em', color: '#C49040', marginBottom: '12px' }}>✦ Selo "Meat by Smokers BBQ"</div>
-              <p style={{ fontSize: '14px', color: '#B8AD9E', lineHeight: 1.7 }}>Ao se tornar parceiro, você agrega autoridade ao seu cardápio usando nossa marca como garantia de procedência premium. Um diferencial que o cliente percebe e paga mais por isso.</p>
+              <div className="flex flex-col sm:flex-row items-start gap-5">
+                <div aria-hidden style={{
+                  width: '84px',
+                  height: '84px',
+                  flexShrink: 0,
+                  background: 'rgba(163,117,51,0.06)',
+                  border: '1px dashed rgba(163,117,51,0.3)',
+                  borderRadius: '4px',
+                }} />
+                <div>
+                  <div style={{ fontFamily: 'Oswald, sans-serif', fontSize: '14px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.1em', color: '#C49040', marginBottom: '12px' }}>✦ Selo "Meat by Smokers BBQ"</div>
+                  <p style={{ fontSize: '14px', color: '#B8AD9E', lineHeight: 1.7 }}>Ao se tornar parceiro, você agrega autoridade ao seu cardápio usando nossa marca como garantia de procedência premium. Um diferencial que o cliente percebe e paga mais por isso.</p>
+                </div>
+              </div>
             </motion.div>
           </div>
 

@@ -3,7 +3,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Smokers BBQ — Carnes Defumadas Premium | Fornecedor B2B São Paulo',
-  description: 'Smokers BBQ: American BBQ autêntico para bares e restaurantes. Carnes defumadas 12h, prontas em 5 minutos. 60%+ de margem. Fornecedor B2B em São Paulo.',
+  description: 'Smokers BBQ: American BBQ autêntico para bares e restaurantes. Carnes defumadas 12h, prontas em 5 minutos. Alta margem e padronização. Fornecedor B2B em São Paulo.',
   keywords: 'smokers bbq, carnes defumadas, american bbq, fornecedor b2b, brisket, costelinha, são paulo',
   openGraph: {
     title: 'Smokers BBQ — Carnes Defumadas Premium',
