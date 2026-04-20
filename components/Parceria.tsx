@@ -36,8 +36,9 @@ export default function Parceria() {
               ))}
             </motion.div>
 
-            <motion.div {...reveal(0.4)} style={{ background: 'rgba(163,98,60,0.1)', border: '1px solid rgba(163,98,60,0.3)', padding: '20px 24px', marginBottom: '32px' }}>
-              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#B8AD9E' }}>⚠ <strong style={{ color: '#A3623C', fontStyle: 'normal' }}>Capacidade de produção limitada</strong> para manter o padrão artesanal. Garanta sua cota de fornecimento.</p>
+            <motion.div {...reveal(0.4)} style={{ background: 'rgba(163,98,60,0.1)', border: '1px solid rgba(163,98,60,0.3)', padding: '20px 24px', marginBottom: '32px', display: 'flex', alignItems: 'center', gap: '14px' }}>
+              <span aria-hidden style={{ fontSize: '28px', lineHeight: 1, color: '#A3623C', flexShrink: 0 }}>⚠</span>
+              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#B8AD9E', margin: 0 }}><strong style={{ color: '#A3623C', fontStyle: 'normal' }}>Capacidade de produção limitada</strong> para manter o padrão artesanal. Garanta sua cota de fornecimento.</p>
             </motion.div>
 
             <motion.div {...reveal(0.5)} className="flex flex-wrap gap-3">
@@ -49,8 +50,13 @@ export default function Parceria() {
           <div>
             <ul style={{ listStyle: 'none', marginBottom: '40px', padding: 0 }}>
               {benefits.map((b, i) => (
-                <motion.li key={i} {...reveal(i * 0.1)} style={{ display: 'flex', gap: '16px', padding: '20px 0', borderBottom: '1px solid rgba(240,232,216,0.06)' }}>
-                  <div style={{ width: '44px', height: '44px', flexShrink: 0, background: 'rgba(163,98,60,0.1)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#A3623C', fontSize: '18px' }}>✓</div>
+                <motion.li
+                  key={i}
+                  {...reveal(i * 0.1)}
+                  className="benefit-item"
+                  style={{ display: 'flex', gap: '16px', padding: '20px 16px', borderBottom: '1px solid rgba(240,232,216,0.06)', cursor: 'default' }}
+                >
+                  <div className="benefit-check" style={{ width: '44px', height: '44px', flexShrink: 0, background: 'rgba(163,98,60,0.1)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#A3623C', fontSize: '18px', transition: 'background 0.3s, transform 0.3s' }}>✓</div>
                   <div>
                     <strong style={{ display: 'block', fontFamily: 'Oswald, sans-serif', fontSize: '16px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.06em', color: '#F0E8D8', marginBottom: '4px' }}>{b.title}</strong>
                     <span style={{ fontSize: '14px', color: '#B8AD9E' }}>{b.text}</span>
@@ -63,8 +69,8 @@ export default function Parceria() {
               <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '2px', background: 'linear-gradient(90deg,#A3623C,#A37533)' }} />
               <div className="flex flex-col sm:flex-row items-start gap-5">
                 <div aria-hidden style={{
-                  width: '84px',
-                  height: '84px',
+                  width: '110px',
+                  height: '110px',
                   flexShrink: 0,
                   background: 'rgba(163,117,51,0.06)',
                   border: '1px dashed rgba(163,117,51,0.3)',
@@ -80,6 +86,36 @@ export default function Parceria() {
 
         </div>
       </div>
+
+      <style jsx>{`
+        :global(.benefit-item) {
+          transition: background 0.3s, transform 0.3s;
+          position: relative;
+        }
+        :global(.benefit-item::before) {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          width: 2px;
+          background: #A3623C;
+          transform: scaleY(0);
+          transform-origin: center;
+          transition: transform 0.35s ease;
+        }
+        :global(.benefit-item:hover) {
+          background: rgba(163,98,60,0.05);
+          transform: translateX(4px);
+        }
+        :global(.benefit-item:hover::before) {
+          transform: scaleY(1);
+        }
+        :global(.benefit-item:hover .benefit-check) {
+          background: rgba(163,98,60,0.25);
+          transform: scale(1.08);
+        }
+      `}</style>
     </section>
   )
 }

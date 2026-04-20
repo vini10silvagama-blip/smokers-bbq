@@ -87,7 +87,7 @@ const produtos: Produto[] = [
   },
   {
     img: '/imagem linguica art - smokers bbq.webp',
-    nome: 'Linguiça Artesanal Defumada',
+    nome: 'Linguiça Defumada',
     tag: 'Petisco perfeito',
     desc: 'Linguiça artesanal Smokers defumada. O petisco perfeito para bares e pubs. Fácil preparo, alto giro, clientes sempre pedindo mais.',
     detalhes: {
@@ -159,7 +159,7 @@ export default function Produtos() {
   return (
     <section id="produtos" style={{ background: '#0A0806', padding: 'clamp(64px,8vw,112px) 0' }}>
       <div style={{ maxWidth: '1160px', margin: '0 auto', padding: '0 20px' }}>
-        <motion.div {...reveal()} className="section-label">Linha Defumada</motion.div>
+        <motion.div {...reveal()} className="section-label">Cardápio de Elite</motion.div>
         <motion.h2 {...reveal(0.1)} style={{ fontFamily: 'Oswald, sans-serif', fontSize: 'clamp(28px,4vw,52px)', fontWeight: 700, textTransform: 'uppercase', lineHeight: 1.1, marginBottom: '12px' }}>
           Nossos <span style={{ color: '#A3623C' }}>Defumados</span>
         </motion.h2>
@@ -259,13 +259,23 @@ export default function Produtos() {
         <div className="dotted-divider" style={{ marginBottom: '48px' }} />
 
         <div style={{ position: 'relative' }}>
-          <div aria-hidden className="process-smoke" style={{
+          <div aria-hidden className="process-smoke process-smoke-a" style={{
             position: 'absolute',
             inset: '-20px -40px',
             background: `
-              radial-gradient(ellipse 55% 50% at 18% 40%, rgba(163,98,60,0.16), transparent 65%),
-              radial-gradient(ellipse 45% 40% at 82% 65%, rgba(196,144,64,0.12), transparent 65%),
-              radial-gradient(ellipse 35% 30% at 50% 50%, rgba(163,98,60,0.08), transparent 70%)
+              radial-gradient(ellipse 55% 50% at 18% 40%, rgba(163,98,60,0.22), transparent 65%),
+              radial-gradient(ellipse 35% 30% at 50% 50%, rgba(163,98,60,0.10), transparent 70%)
+            `,
+            filter: 'blur(40px)',
+            pointerEvents: 'none',
+            zIndex: 0,
+          }} />
+          <div aria-hidden className="process-smoke process-smoke-b" style={{
+            position: 'absolute',
+            inset: '-20px -40px',
+            background: `
+              radial-gradient(ellipse 45% 40% at 82% 65%, rgba(196,144,64,0.16), transparent 65%),
+              radial-gradient(ellipse 28% 26% at 30% 72%, rgba(196,144,64,0.10), transparent 70%)
             `,
             filter: 'blur(40px)',
             pointerEvents: 'none',
@@ -375,6 +385,26 @@ export default function Produtos() {
       </AnimatePresence>
 
       <style jsx>{`
+        @keyframes smokePulseA {
+          0%, 100% { opacity: 0.75; transform: translate(0, 0) scale(1); }
+          50%      { opacity: 1;    transform: translate(12px, -8px) scale(1.06); }
+        }
+        @keyframes smokePulseB {
+          0%, 100% { opacity: 0.85; transform: translate(0, 0) scale(1.02); }
+          50%      { opacity: 0.65; transform: translate(-10px, 6px) scale(0.96); }
+        }
+        :global(.process-smoke-a) {
+          animation: smokePulseA 8s ease-in-out infinite;
+          will-change: transform, opacity;
+        }
+        :global(.process-smoke-b) {
+          animation: smokePulseB 11s ease-in-out infinite;
+          will-change: transform, opacity;
+        }
+        @media (prefers-reduced-motion: reduce) {
+          :global(.process-smoke-a),
+          :global(.process-smoke-b) { animation: none; }
+        }
         @media (min-width: 860px) {
           :global(.modal-grid) {
             grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr) !important;
