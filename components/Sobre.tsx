@@ -6,30 +6,34 @@ const reveal = (delay = 0) => ({ initial: { opacity: 0, y: 40 }, whileInView: { 
 
 export default function Sobre() {
   return (
-    <section id="sobre" className="sobre-section" style={{ position: 'relative', background: '#0A0806', padding: 'clamp(80px,10vw,140px) 0', overflow: 'hidden' }}>
+    <section id="sobre" className="sobre-section" style={{ position: 'relative', background: '#0A0806', padding: 'clamp(80px,10vw,140px) 0', overflow: 'hidden', minHeight: 'clamp(560px, 55vw, 760px)' }}>
       <div aria-hidden style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
         <div className="sobre-bg sobre-bg-desktop" style={{ position: 'absolute', inset: 0 }}>
           <Image
             src="/banner-historia-smokers.webp"
             alt=""
             fill
+            quality={92}
+            priority={false}
             sizes="100vw"
-            style={{ objectFit: 'cover', objectPosition: 'center right' }}
+            style={{ objectFit: 'cover', objectPosition: 'right center' }}
           />
         </div>
-        <div className="sobre-bg sobre-bg-mobile" style={{ position: 'absolute', inset: 0 }}>
+        <div className="sobre-bg sobre-bg-mobile" style={{ position: 'absolute', left: 0, right: 0, top: 0, bottom: '-4px' }}>
           <Image
             src="/banner-historia-smokers-mobile.webp"
             alt=""
             fill
-            sizes="100vw"
+            quality={92}
+            priority={false}
+            sizes="(max-width: 1023px) 100vw, 0px"
             style={{ objectFit: 'cover', objectPosition: 'center bottom' }}
           />
         </div>
         <div className="sobre-overlay" style={{
           position: 'absolute',
           inset: 0,
-          background: 'linear-gradient(90deg, rgba(10,8,6,0.96) 0%, rgba(10,8,6,0.9) 38%, rgba(10,8,6,0.55) 65%, rgba(10,8,6,0.35) 100%)',
+          background: 'linear-gradient(90deg, rgba(10,8,6,1) 0%, rgba(10,8,6,1) 42%, rgba(10,8,6,0) 55%, rgba(10,8,6,0) 100%)',
         }} />
       </div>
 
@@ -51,7 +55,7 @@ export default function Sobre() {
               Unimos a bagagem técnica internacional à estrutura profissional da nossa produção em São Paulo, criando um ecossistema que preserva a alma artesanal da defumação em escala industrial.
             </motion.p>
 
-            <motion.div {...reveal(0.5)} className="flex" style={{ borderTop: '1px solid rgba(240,232,216,0.12)', paddingTop: '32px' }}>
+            <motion.div {...reveal(0.5)} className="flex sobre-stats" style={{ borderTop: '1px solid rgba(240,232,216,0.12)', paddingTop: '32px' }}>
               {[['7+','Anos de expertise'],['12h','Defumação por corte'],['Alta','Margem parceiros']].map(([val, lbl], i) => (
                 <div key={i} style={{ flex: 1, paddingRight: i < 2 ? 'clamp(16px,3vw,36px)' : '0', paddingLeft: i > 0 ? 'clamp(16px,3vw,36px)' : '0', borderRight: i < 2 ? '1px solid rgba(240,232,216,0.12)' : 'none' }}>
                   <div style={{ fontFamily: 'Oswald, sans-serif', fontSize: 'clamp(28px,4vw,42px)', fontWeight: 700, color: '#A3623C', lineHeight: 1, marginBottom: '8px' }}>{val}</div>
@@ -70,18 +74,20 @@ export default function Sobre() {
         :global(.sobre-bg-mobile) { display: none; }
         @media (max-width: 1023px) {
           :global(.sobre-section) {
-            padding-bottom: clamp(520px, 120vw, 720px) !important;
+            padding-bottom: clamp(340px, 85vw, 440px) !important;
+            min-height: 0 !important;
+          }
+          :global(.sobre-stats) {
+            margin-bottom: clamp(48px, 10vw, 80px) !important;
           }
           :global(.sobre-bg-desktop) { display: none; }
           :global(.sobre-bg-mobile) { display: block; }
           :global(.sobre-overlay) {
             background: linear-gradient(
               180deg,
-              rgba(10,8,6,0.97) 0%,
-              rgba(10,8,6,0.95) 35%,
-              rgba(10,8,6,0.82) 50%,
-              rgba(10,8,6,0.45) 62%,
-              rgba(10,8,6,0.12) 78%,
+              rgba(10,8,6,1) 0%,
+              rgba(10,8,6,1) 58%,
+              rgba(10,8,6,0) 70%,
               rgba(10,8,6,0) 100%
             ) !important;
           }
