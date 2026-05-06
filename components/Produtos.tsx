@@ -87,7 +87,7 @@ const produtos: Produto[] = [
   },
   {
     img: '/imagem linguica art - smokers bbq.webp',
-    nome: 'Linguiça Defumada',
+    nome: 'Linguiça Smokers',
     tag: 'Petiscos e sanduíches',
     desc: 'Linguiça artesanal defumada, sem conservantes e pronta para regenerar. Perfeita para petisco ou sanduíche.',
     detalhes: {
