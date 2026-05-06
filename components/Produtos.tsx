@@ -304,7 +304,7 @@ export default function Produtos() {
                   >
                     <Image src={s.img} alt={s.label} fill sizes="220px" style={{ objectFit: 'cover' }} />
                     <motion.div
-                      variants={{ rest: { opacity: 0.35 }, hover: { opacity: 0 } }}
+                      variants={{ rest: { opacity: 0.15 }, hover: { opacity: 0 } }}
                       transition={{ duration: 0.3 }}
                       style={{ position: 'absolute', inset: 0, background: '#A3623C', pointerEvents: 'none' }}
                     />
