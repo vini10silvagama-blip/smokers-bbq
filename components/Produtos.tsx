@@ -291,17 +291,27 @@ export default function Produtos() {
               <motion.div
                 key={i}
                 {...reveal(i * 0.1)}
-                whileHover={{ scale: 1.08 }}
-                transition={{ type: 'spring', stiffness: 260, damping: 20 }}
+                initial="rest"
+                whileHover="hover"
+                animate="rest"
                 style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', padding: 'clamp(16px,2vw,24px) 16px', cursor: 'default' }}
               >
-                <div style={{ position: 'relative', width: 'clamp(110px, 12vw, 140px)', height: 'clamp(110px, 12vw, 140px)', marginBottom: '20px' }}>
-                  <div style={{ position: 'relative', width: '100%', height: '100%', borderRadius: '50%', overflow: 'hidden', border: '2px solid rgba(163,98,60,0.5)', boxShadow: '0 8px 24px rgba(0,0,0,0.5)' }}>
-                    <Image src={s.img} alt={s.label} fill sizes="140px" style={{ objectFit: 'cover' }} />
-                  </div>
-                  <div style={{ position: 'absolute', top: '-4px', right: '-4px', width: '38px', height: '38px', background: '#A3623C', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'Oswald, sans-serif', fontSize: '14px', fontWeight: 700, color: '#0A0806', border: '2px solid #0A0806', boxShadow: '0 2px 8px rgba(0,0,0,0.6)' }}>{s.n}</div>
+                <div style={{ position: 'relative', width: 'clamp(160px, 18vw, 220px)', height: 'clamp(160px, 18vw, 220px)', marginBottom: '20px' }}>
+                  <motion.div
+                    variants={{ rest: { scale: 1 }, hover: { scale: 1.08 } }}
+                    transition={{ type: 'spring', stiffness: 260, damping: 20 }}
+                    style={{ position: 'relative', width: '100%', height: '100%', borderRadius: '50%', overflow: 'hidden', border: '2px solid rgba(163,98,60,0.5)', boxShadow: '0 8px 24px rgba(0,0,0,0.5)' }}
+                  >
+                    <Image src={s.img} alt={s.label} fill sizes="220px" style={{ objectFit: 'cover' }} />
+                    <motion.div
+                      variants={{ rest: { opacity: 0.35 }, hover: { opacity: 0 } }}
+                      transition={{ duration: 0.3 }}
+                      style={{ position: 'absolute', inset: 0, background: '#A3623C', pointerEvents: 'none' }}
+                    />
+                  </motion.div>
+                  <div style={{ position: 'absolute', top: '-4px', right: '-4px', width: '42px', height: '42px', background: '#A3623C', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'Oswald, sans-serif', fontSize: '15px', fontWeight: 700, color: '#0A0806', border: '2px solid #0A0806', boxShadow: '0 2px 8px rgba(0,0,0,0.6)', zIndex: 2 }}>{s.n}</div>
                 </div>
-                <div style={{ fontFamily: 'Oswald, sans-serif', fontSize: '15px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#F0E8D8', marginBottom: '8px' }}>{s.label}</div>
+                <div style={{ fontFamily: 'Oswald, sans-serif', fontSize: '15px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#A3623C', marginBottom: '8px' }}>{s.label}</div>
                 <p style={{ fontSize: '13px', color: '#B8AD9E', lineHeight: 1.6 }}>{s.desc}</p>
               </motion.div>
             ))}
