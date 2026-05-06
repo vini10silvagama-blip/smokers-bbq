@@ -25,7 +25,7 @@ const ClockIcon = () => (
 )
 
 const cards = [
-  { title: 'Defumação de Verdade', text: '12 horas em pit smoker, com madeira nobre. O mesmo método das melhores smokehouses dos EUA.', Icon: FlameIcon },
+  { title: 'Defumação de Verdade', text: 'Até 12 horas de defumação no Pit Smoker, com madeira nobre. O mesmo método das melhores smokehouses dos EUA.', Icon: FlameIcon },
   { title: 'Carne Premium', text: 'Cortes selecionados, temperados e defumados por quem respeita o tempo do BBQ.', Icon: MeatIcon },
   { title: 'Finalização em Minutos', text: 'Chega a vácuo, pronto para regenerar e servir. Autenticidade sem complexidade na sua cozinha.', Icon: ClockIcon },
 ]
@@ -55,7 +55,7 @@ export default function Solucao() {
               Ofereça churrasco defumado <span style={{ color: '#A3623C' }}>de verdade</span>, sem estrutura, sem equipe e sem complicação.
             </motion.h2>
             <motion.p {...reveal} style={{ fontSize: 'clamp(15px,1.4vw,17px)', fontWeight: 400, color: '#B8AD9E', lineHeight: 1.8 }}>
-              A Smokers BBQ oferece a solução completa para você. Produzir um American BBQ de verdade exige tempo, técnica, equipamentos e uma equipe especializada — cenário que não é a realidade da maioria dos bares e restaurantes. Foi pensando nisso que criamos uma solução inteligente: carnes defumadas no pitmaster, prontas para finalização. Você elimina a complexidade da produção, reduz desperdícios, não precisa investir em equipamentos ou mão de obra especializada, e ainda oferece um produto premium, pronto em 5 minutos, com sabor autêntico e padrão constante. <strong style={{ color: '#A3623C', fontWeight: 700 }}>Assim, sua cozinha ganha eficiência, seu cardápio ganha valor e seu negócio ganha escala.</strong>
+              Produzir um American BBQ de verdade exige tempo, técnica, equipamentos e uma equipe especializada — cenário que não é a realidade da maioria dos bares e restaurantes. Foi pensando nisso que criamos uma solução inteligente: carnes defumadas no pitmaster, prontas para finalização. Você elimina a complexidade da produção, reduz desperdícios, não precisa investir em equipamentos ou mão de obra especializada, e ainda oferece um produto premium, pronto em 5 minutos, com sabor autêntico e padrão constante. <strong style={{ color: '#A3623C', fontWeight: 700 }}>Assim, sua cozinha ganha eficiência, seu cardápio ganha valor e seu negócio ganha escala.</strong>
             </motion.p>
           </div>
         </div>

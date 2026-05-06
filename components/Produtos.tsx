@@ -36,7 +36,7 @@ const produtos: Produto[] = [
   {
     img: '/imagem cost suina - smokers bbq.webp',
     nome: 'Costela Suína Defumada',
-    tag: 'Campeão de vendas',
+    tag: 'A legítima Costelinha BBQ',
     desc: 'O campeão de vendas. Macia, suculenta e irresistível. Cai do osso com textura que conquista qualquer cardápio de bar ou restaurante.',
     detalhes: {
       carne: 'Costela Suína Tipo A',
@@ -62,7 +62,7 @@ const produtos: Produto[] = [
   {
     img: '/imagem pulled pork - smokers bbq.webp',
     nome: 'Pulled Pork',
-    tag: 'Versátil · Ragu & Sanduíches',
+    tag: 'Ragu e sanduíches',
     desc: 'Pernil suíno desfiado com textura irresistível. Versátil para ragus, massas, sanduíches e pratos principais com molho barbecue.',
     detalhes: {
       carne: 'Pernil suíno desfiado',
@@ -75,8 +75,8 @@ const produtos: Produto[] = [
   {
     img: '/imagem frango def - smokers bbq.webp',
     nome: 'Frango Defumado',
-    tag: 'Versátil · Acessível',
-    desc: 'Opção acessível para pratos e sanduíches premium. Perfeito para diversificar o cardápio com alto giro e ótima margem.',
+    tag: 'Surpreendente',
+    desc: 'Quem experimenta costuma dizer que é o melhor frango que já provou na vida. Macio e saboroso. Perfeito para diversificar o cardápio.',
     detalhes: {
       carne: 'Coxa e sobrecoxa de frango — com ou sem osso',
       defumacao: 'Até 4 horas em lenha frutífera — aroeira, macieira e laranjeira',
@@ -88,8 +88,8 @@ const produtos: Produto[] = [
   {
     img: '/imagem linguica art - smokers bbq.webp',
     nome: 'Linguiça Defumada',
-    tag: 'Petisco perfeito',
-    desc: 'Linguiça artesanal Smokers defumada. O petisco perfeito para bares e pubs. Fácil preparo, alto giro, clientes sempre pedindo mais.',
+    tag: 'Petiscos e sanduíches',
+    desc: 'Linguiça artesanal defumada, sem conservantes e pronta para regenerar. Perfeita para petisco ou sanduíche.',
     detalhes: {
       carne: 'Pernil e toucinho com especiarias — SEM conservantes',
       defumacao: 'Defumada a frio por 30min + 1h em lenha frutífera',

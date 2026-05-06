@@ -58,7 +58,7 @@ export default function Hero() {
         </motion.h1>
 
         <motion.p {...fade(0.4)} style={{ fontSize: 'clamp(15px, 2vw, 18px)', fontWeight: 400, color: '#B8AD9E', maxWidth: '580px', marginBottom: '40px', lineHeight: 1.8 }}>
-          Proteínas premium defumadas por 12h, prontas para regenerar em 5 minutos. A solução de elite para o seu bar, restaurante ou evento.
+          Carnes defumadas por até 12h em lenhas frutíferas, prontas para servir em 5 minutos. O legítimo Churrasco Texano para o seu bar ou restaurante.
         </motion.p>
 
         <motion.div {...fade(0.6)} className="flex flex-wrap gap-3 mb-16">
