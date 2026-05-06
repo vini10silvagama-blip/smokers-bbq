@@ -1,7 +1,19 @@
 'use client'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 const reveal = (delay = 0) => ({ initial: { opacity: 0, y: 40 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true }, transition: { duration: 0.7, delay } })
+
+const embers = Array.from({ length: 18 }, (_, i) => ({
+  id: i,
+  left: `${Math.random() * 100}%`,
+  bottom: `${Math.random() * 30}%`,
+  size: `${Math.random() * 2.5 + 1.2}px`,
+  duration: `${Math.random() * 6 + 6}s`,
+  delay: `${Math.random() * 8}s`,
+  drift: `${(Math.random() - 0.5) * 70}px`,
+  color: Math.random() > 0.5 ? '#A3623C' : '#C07A4A',
+}))
 
 const metrics = [['Alta','Margem Bruta'],['5min','Para Servir'],['R$0','Em Equipamentos'],['100%','Suporte Técnico']]
 const benefits = [
@@ -14,8 +26,26 @@ const benefits = [
 
 export default function Parceria() {
   return (
-    <section id="parceria" style={{ background: '#1A1410', padding: 'clamp(64px,8vw,112px) 0' }}>
-      <div style={{ maxWidth: '1160px', margin: '0 auto', padding: '0 20px' }}>
+    <section id="parceria" className="relative overflow-hidden" style={{ background: '#0A0806', padding: 'clamp(64px,8vw,112px) 0' }}>
+      {/* Glow cobre radial — efeito de brasa */}
+      <div aria-hidden style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 50% 100%, rgba(163,98,60,0.18), transparent 60%), radial-gradient(ellipse at 20% 0%, rgba(163,117,51,0.08), transparent 50%)', pointerEvents: 'none', zIndex: 0 }} />
+      {/* Textura de grão sobre o fundo */}
+      <div aria-hidden className="grain" style={{ position: 'absolute', inset: 0, opacity: 0.6, pointerEvents: 'none', zIndex: 0 }} />
+      {/* Brasas flutuantes */}
+      {embers.map(e => (
+        <span key={e.id} className="ember" style={{
+          left: e.left,
+          bottom: e.bottom,
+          width: e.size,
+          height: e.size,
+          background: e.color,
+          '--duration': e.duration,
+          '--delay': e.delay,
+          '--drift': e.drift,
+          zIndex: 1,
+        } as React.CSSProperties} />
+      ))}
+      <div style={{ position: 'relative', zIndex: 2, maxWidth: '1160px', margin: '0 auto', padding: '0 20px' }}>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
 
           <div>
@@ -36,12 +66,7 @@ export default function Parceria() {
               ))}
             </motion.div>
 
-            <motion.div {...reveal(0.4)} style={{ background: 'rgba(163,98,60,0.1)', border: '1px solid rgba(163,98,60,0.3)', padding: '20px 24px', marginBottom: '32px', display: 'flex', alignItems: 'center', gap: '14px' }}>
-              <span aria-hidden style={{ fontSize: '28px', lineHeight: 1, color: '#A3623C', flexShrink: 0 }}>⚠</span>
-              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#B8AD9E', margin: 0 }}><strong style={{ color: '#A3623C', fontStyle: 'normal' }}>Capacidade de produção limitada</strong> para manter o padrão artesanal. Garanta sua cota de fornecimento.</p>
-            </motion.div>
-
-            <motion.div {...reveal(0.5)} className="flex flex-wrap gap-3">
+            <motion.div {...reveal(0.4)} className="flex flex-wrap gap-3">
               <a href="#contato" style={{ fontFamily: 'Oswald, sans-serif', fontSize: '13px', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#0A0806', background: '#A3623C', padding: '14px 24px', textDecoration: 'none', clipPath: 'polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%)' }}>Agendar Degustação Técnica</a>
               <a href="#contato" style={{ fontFamily: 'Oswald, sans-serif', fontSize: '13px', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#F0E8D8', background: 'transparent', border: '1px solid rgba(240,232,216,0.35)', padding: '14px 24px', textDecoration: 'none', clipPath: 'polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%)' }}>Baixar Catálogo</a>
             </motion.div>
@@ -67,15 +92,10 @@ export default function Parceria() {
 
             <motion.div {...reveal(0.5)} style={{ background: '#110E0B', border: '1px solid rgba(163,117,51,0.25)', padding: '32px', position: 'relative' }}>
               <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '2px', background: 'linear-gradient(90deg,#A3623C,#A37533)' }} />
-              <div className="flex flex-col sm:flex-row items-start gap-5">
-                <div aria-hidden style={{
-                  width: '110px',
-                  height: '110px',
-                  flexShrink: 0,
-                  background: 'rgba(163,117,51,0.06)',
-                  border: '1px dashed rgba(163,117,51,0.3)',
-                  borderRadius: '4px',
-                }} />
+              <div className="flex flex-col sm:flex-row items-center gap-5">
+                <div style={{ width: '110px', height: '110px', flexShrink: 0, position: 'relative' }}>
+                  <Image src="/selo - smokers fundo transparente.webp" alt="Selo Smokers BBQ" fill sizes="110px" style={{ objectFit: 'contain' }} />
+                </div>
                 <div>
                   <div style={{ fontFamily: 'Oswald, sans-serif', fontSize: '14px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.1em', color: '#C49040', marginBottom: '12px' }}>✦ Selo "Meat by Smokers BBQ"</div>
                   <p style={{ fontSize: '14px', color: '#B8AD9E', lineHeight: 1.7 }}>Ao se tornar parceiro, você agrega autoridade ao seu cardápio usando nossa marca como garantia de procedência premium. Um diferencial que o cliente percebe e paga mais por isso.</p>
