@@ -43,19 +43,22 @@ export default function Sobre() {
           <div>
             <motion.div {...reveal()} className="section-label">Nossa História</motion.div>
             <motion.h2 {...reveal(0.1)} style={{ fontFamily: 'Oswald, sans-serif', fontSize: 'clamp(24px,3.5vw,44px)', fontWeight: 700, textTransform: 'uppercase', lineHeight: 1.1, marginBottom: '24px' }}>
-              Onde a Tradição do <span style={{ color: '#A3623C' }}>Texas</span> Encontra a Eficiência de <span style={{ color: '#A3623C' }}>São Paulo.</span>
+              Nós levamos <span style={{ color: '#A3623C' }}>anos</span> para dominar o fogo, para que você leve apenas <span style={{ color: '#A3623C' }}>5 minutos</span> para servir a perfeição.
             </motion.h2>
             <motion.p {...reveal(0.2)} style={{ fontSize: '16px', color: '#B8AD9E', lineHeight: 1.85, marginBottom: '16px' }}>
-              A Smokers BBQ não nasceu em um escritório, mas ao redor do fogo. Nossa história é movida por um fascínio quase obsessivo por duas coisas: <em style={{ color: '#C07A4A' }}>a paciência do Low & Slow</em> e a busca pela mordida perfeita.
+              A Smokers BBQ nasceu da paixão pelo verdadeiro Churrasco Americano e da busca implacável pela qualidade. Fomos até o Texas buscar na fonte as melhores técnicas de defumação e passamos anos refinando processos e testando limites para que você não precise investir em infraestrutura pesada, contratar mão de obra especializada ou enfrentar a longa e custosa curva de aprendizado que essa arte exige.
             </motion.p>
             <motion.p {...reveal(0.3)} style={{ fontSize: '16px', color: '#B8AD9E', lineHeight: 1.85, marginBottom: '16px' }}>
-              Tudo começou com a união de duas visões complementares. A expertise de Fernando Rezende em comunicação e estratégia, e o rigor técnico de Ricardo Bertoni — um apaixonado pela cultura do defumado que foi ao Texas aprender com os grandes Pitmasters.
+              Essa expertise é fruto da parceria entre Fernando Rezende e o Chef Ricardo Bertoni, que com muita dedicação fundiram o domínio técnico com uma visão estratégica de negócio, resultando em uma operação que entrega o rigor do churrasco artesanal com total eficiência. Afinal, entendemos que, para um restaurante ter sucesso, o sabor inesquecível e a excelência do produto precisam caminhar lado a lado com a lucratividade.
             </motion.p>
-            <motion.p {...reveal(0.4)} style={{ fontSize: '16px', color: '#B8AD9E', lineHeight: 1.85, marginBottom: '40px' }}>
-              Unimos a bagagem técnica internacional à estrutura profissional da nossa produção em São Paulo, criando um ecossistema que preserva a alma artesanal da defumação em escala industrial.
+            <motion.p {...reveal(0.4)} style={{ fontSize: '16px', color: '#B8AD9E', lineHeight: 1.85, marginBottom: '16px' }}>
+              Por isso, nós assumimos o calor e a fumaça do Pit Smoker, as horas de defumação, a seleção dos melhores cortes e toda a complexidade de produção, para que você entregue ao seu cliente o melhor do American BBQ em poucos minutos.
+            </motion.p>
+            <motion.p {...reveal(0.5)} style={{ fontSize: '16px', color: '#F0E8D8', lineHeight: 1.85, marginBottom: '40px', fontWeight: 500 }}>
+              Fale com a nossa equipe, agende uma degustação e eleve o nível do seu cardápio com a <span style={{ color: '#A3623C' }}>Smokers BBQ!</span>
             </motion.p>
 
-            <motion.div {...reveal(0.5)} className="flex sobre-stats" style={{ borderTop: '1px solid rgba(240,232,216,0.12)', paddingTop: '32px' }}>
+            <motion.div {...reveal(0.6)} className="flex sobre-stats" style={{ borderTop: '1px solid rgba(240,232,216,0.12)', paddingTop: '32px' }}>
               {[['7+','Anos de expertise'],['12h','Defumação por corte'],['Alta','Margem parceiros']].map(([val, lbl], i) => (
                 <div key={i} style={{ flex: 1, paddingRight: i < 2 ? 'clamp(16px,3vw,36px)' : '0', paddingLeft: i > 0 ? 'clamp(16px,3vw,36px)' : '0', borderRight: i < 2 ? '1px solid rgba(240,232,216,0.12)' : 'none' }}>
                   <div style={{ fontFamily: 'Oswald, sans-serif', fontSize: 'clamp(28px,4vw,42px)', fontWeight: 700, color: '#A3623C', lineHeight: 1, marginBottom: '8px' }}>{val}</div>
