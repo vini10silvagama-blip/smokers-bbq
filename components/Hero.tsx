@@ -58,12 +58,12 @@ export default function Hero() {
         </motion.h1>
 
         <motion.p {...fade(0.4)} style={{ fontSize: 'clamp(15px, 2vw, 18px)', fontWeight: 400, color: '#B8AD9E', maxWidth: '580px', marginBottom: '40px', lineHeight: 1.8 }}>
-          Carnes defumadas por até 12h em lenhas frutíferas, prontas para servir em 5 minutos. O legítimo Churrasco Texano para o seu bar ou restaurante.
+          Carnes defumadas por <strong style={{ color: '#F0E8D8', fontWeight: 600 }}>até 12h em lenhas frutíferas</strong>, prontas para servir em <strong style={{ color: '#F0E8D8', fontWeight: 600 }}>5 minutos</strong>. O legítimo Churrasco Texano para o seu bar ou restaurante.
         </motion.p>
 
         <motion.div {...fade(0.6)} className="flex flex-wrap gap-3 mb-16">
           <a href="#contato" style={{ fontFamily: 'Oswald, sans-serif', fontSize: '13px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#0A0806', background: '#A3623C', padding: '14px 28px', textDecoration: 'none', clipPath: 'polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%)' }}>Quero uma Degustação Técnica</a>
-          <a href="#produtos" style={{ fontFamily: 'Oswald, sans-serif', fontSize: '13px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#F0E8D8', background: 'transparent', border: '1px solid rgba(240,232,216,0.35)', padding: '14px 28px', textDecoration: 'none', clipPath: 'polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%)' }}>Conheça Nosso Cardápio</a>
+          <a href="#produtos" style={{ fontFamily: 'Oswald, sans-serif', fontSize: '13px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#F0E8D8', background: 'transparent', border: '1px solid rgba(240,232,216,0.35)', padding: '14px 28px', textDecoration: 'none', clipPath: 'polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%)' }}>Conheça Nossos Produtos</a>
         </motion.div>
 
         <motion.div {...fade(0.8)} className="grid grid-cols-3 gap-4" style={{ maxWidth: '400px' }}>
