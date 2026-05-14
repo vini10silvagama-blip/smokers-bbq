@@ -101,7 +101,7 @@ const produtos: Produto[] = [
 ]
 
 const steps = [
-  { n: '01', label: 'Seleção', desc: 'Carnes nobres selecionadas com rigor', img: '/processos 01 - smokers bbq.webp' },
+  { n: '01', label: 'Seleção', desc: 'Carnes nobres selecionadas e temperadas', img: '/processos 01 - smokers bbq.webp' },
   { n: '02', label: 'Defumação 12h', desc: 'Lenhas frutíferas, temperatura controlada', img: '/processos 02 - smokers bbq.webp' },
   { n: '03', label: 'Embalagem a Vácuo', desc: 'Sabor e qualidade preservados', img: '/processos 03 - smokers bbq.webp' },
   { n: '04', label: 'Heat & Eat', desc: '5 min no banho-maria. Pronto para servir.', img: '/processos 04 - smokers bbq.webp' },
