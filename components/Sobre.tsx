@@ -19,7 +19,7 @@ export default function Sobre() {
             style={{ objectFit: 'cover', objectPosition: 'right center' }}
           />
         </div>
-        <div className="sobre-bg sobre-bg-mobile" style={{ position: 'absolute', left: 0, right: 0, top: 0, bottom: 0, background: '#0A0806' }}>
+        <div className="sobre-bg sobre-bg-mobile" style={{ position: 'absolute', left: 0, right: 0, bottom: 0, height: '178vw', maxHeight: '900px', background: '#0A0806' }}>
           <Image
             src="/banner-historia-smokers-mobile.webp"
             alt=""
@@ -27,7 +27,7 @@ export default function Sobre() {
             quality={92}
             priority={false}
             sizes="(max-width: 1023px) 100vw, 0px"
-            style={{ objectFit: 'contain', objectPosition: 'center bottom' }}
+            style={{ objectFit: 'cover', objectPosition: 'center bottom' }}
           />
         </div>
         <div className="sobre-overlay" style={{
@@ -98,7 +98,7 @@ export default function Sobre() {
 
         @media (max-width: 1023px) {
           :global(.sobre-section) {
-            padding-bottom: clamp(600px, 150vw, 900px) !important;
+            padding-bottom: clamp(700px, 178vw, 900px) !important;
           }
           :global(.sobre-stats) {
             margin-bottom: clamp(32px, 6vw, 60px) !important;
