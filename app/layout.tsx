@@ -1,5 +1,23 @@
 import type { Metadata, Viewport } from 'next'
+import { Oswald, Lato } from 'next/font/google'
 import './globals.css'
+
+const oswald = Oswald({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+  variable: '--font-oswald',
+  preload: true,
+})
+
+const lato = Lato({
+  subsets: ['latin'],
+  weight: ['300', '400', '700'],
+  style: ['normal', 'italic'],
+  display: 'swap',
+  variable: '--font-lato',
+  preload: true,
+})
 
 export const metadata: Metadata = {
   title: 'Smokers BBQ — Carnes Defumadas Premium | Fornecedor B2B São Paulo',
@@ -22,15 +40,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-BR">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Lato:ital,wght@0,300;0,400;0,700;1,300&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html lang="pt-BR" className={`${oswald.variable} ${lato.variable}`}>
       <body>{children}</body>
     </html>
   )

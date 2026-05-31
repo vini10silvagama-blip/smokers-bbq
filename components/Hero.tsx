@@ -19,11 +19,11 @@ export default function Hero() {
     <section id="hero" className="hero-section relative flex items-center overflow-hidden" style={{ background: '#0A0806', paddingTop: '72px' }}>
 
       {/* Vídeo desktop */}
-      <video autoPlay muted loop playsInline preload="metadata" className="absolute inset-0 w-full h-full object-cover hidden md:block">
+      <video autoPlay muted loop playsInline preload="none" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover hidden md:block">
         <source src="/HERO VIDEO OTIMIZADO - DESKTOP.mp4" type="video/mp4" />
       </video>
       {/* Vídeo mobile */}
-      <video autoPlay muted loop playsInline preload="metadata" className="absolute inset-0 w-full h-full object-cover md:hidden">
+      <video autoPlay muted loop playsInline preload="none" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover md:hidden">
         <source src="/HERO VIDEO OTIMIZADO - MOBILE.mp4" type="video/mp4" />
       </video>
 

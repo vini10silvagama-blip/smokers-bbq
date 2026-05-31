@@ -120,28 +120,28 @@ export default function Contato() {
               }} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label style={labelStyle}>Nome *</label>
-                    <input required name="nome" placeholder="Seu nome" className="form-input" style={inputStyle}
+                    <label htmlFor="nome" style={labelStyle}>Nome *</label>
+                    <input required id="nome" name="nome" placeholder="Seu nome" className="form-input" style={inputStyle}
                       onFocus={e => (e.target.style.borderColor = '#A3623C')}
                       onBlur={e => (e.target.style.borderColor = 'rgba(240,232,216,0.1)')} />
                   </div>
                   <div>
-                    <label style={labelStyle}>Empresa</label>
-                    <input name="empresa" placeholder="Bar ou restaurante" className="form-input" style={inputStyle}
+                    <label htmlFor="empresa" style={labelStyle}>Empresa</label>
+                    <input id="empresa" name="empresa" placeholder="Bar ou restaurante" className="form-input" style={inputStyle}
                       onFocus={e => (e.target.style.borderColor = '#A3623C')}
                       onBlur={e => (e.target.style.borderColor = 'rgba(240,232,216,0.1)')} />
                   </div>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label style={labelStyle}>WhatsApp *</label>
-                    <input required name="whatsapp" placeholder="(11) 99999-9999" className="form-input" style={inputStyle}
+                    <label htmlFor="whatsapp" style={labelStyle}>WhatsApp *</label>
+                    <input required id="whatsapp" name="whatsapp" placeholder="(11) 99999-9999" className="form-input" style={inputStyle}
                       onFocus={e => (e.target.style.borderColor = '#A3623C')}
                       onBlur={e => (e.target.style.borderColor = 'rgba(240,232,216,0.1)')} />
                   </div>
                   <div>
-                    <label style={labelStyle}>Tipo de Negócio</label>
-                    <select name="tipo" className="form-input" style={{ ...inputStyle, appearance: 'none', cursor: 'pointer', color: '#B8AD9E' }}>
+                    <label htmlFor="tipo" style={labelStyle}>Tipo de Negócio</label>
+                    <select id="tipo" name="tipo" className="form-input" style={{ ...inputStyle, appearance: 'none', cursor: 'pointer', color: '#B8AD9E' }}>
                       <option>Selecione...</option>
                       <option>Bar / Pub</option>
                       <option>Restaurante</option>
@@ -154,8 +154,8 @@ export default function Contato() {
                   </div>
                 </div>
                 <div>
-                  <label style={labelStyle}>Mensagem</label>
-                  <textarea name="mensagem" placeholder="Conte sobre seu negócio e interesse..." rows={4} className="form-input" style={{ ...inputStyle, resize: 'vertical' }}
+                  <label htmlFor="mensagem" style={labelStyle}>Mensagem</label>
+                  <textarea id="mensagem" name="mensagem" placeholder="Conte sobre seu negócio e interesse..." rows={4} className="form-input" style={{ ...inputStyle, resize: 'vertical' }}
                     onFocus={e => (e.target.style.borderColor = '#A3623C')}
                     onBlur={e => (e.target.style.borderColor = 'rgba(240,232,216,0.1)')} />
                 </div>
