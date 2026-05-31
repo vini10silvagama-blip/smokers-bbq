@@ -19,7 +19,7 @@ export default function Sobre() {
             style={{ objectFit: 'cover', objectPosition: 'right center' }}
           />
         </div>
-        <div className="sobre-bg sobre-bg-mobile" style={{ position: 'absolute', left: 0, right: 0, top: 0, bottom: '-4px' }}>
+        <div className="sobre-bg sobre-bg-mobile" style={{ position: 'absolute', left: 0, right: 0, top: 0, bottom: 0 }}>
           <Image
             src="/banner-historia-smokers-mobile.webp"
             alt=""
@@ -98,18 +98,20 @@ export default function Sobre() {
 
         @media (max-width: 1023px) {
           :global(.sobre-section) {
-            padding-bottom: clamp(340px, 85vw, 440px) !important;
+            padding-bottom: clamp(420px, 110vw, 620px) !important;
           }
           :global(.sobre-stats) {
-            margin-bottom: clamp(48px, 10vw, 80px) !important;
+            margin-bottom: clamp(32px, 6vw, 60px) !important;
             position: relative;
             z-index: 2;
           }
           :global(.sobre-stats > div) {
-            background: rgba(10,8,6,0.85);
-            backdrop-filter: blur(4px);
-            padding-top: 12px !important;
-            padding-bottom: 12px !important;
+            background: rgba(10,8,6,0.92);
+            backdrop-filter: blur(6px);
+            padding-top: 14px !important;
+            padding-bottom: 14px !important;
+            padding-left: 12px !important;
+            padding-right: 12px !important;
           }
           :global(.sobre-bg-desktop) { display: none; }
           :global(.sobre-bg-mobile) { display: block; }
@@ -117,8 +119,9 @@ export default function Sobre() {
             background: linear-gradient(
               180deg,
               rgba(10,8,6,1) 0%,
-              rgba(10,8,6,1) 70%,
-              rgba(10,8,6,0.5) 82%,
+              rgba(10,8,6,1) 38%,
+              rgba(10,8,6,0.5) 48%,
+              rgba(10,8,6,0) 60%,
               rgba(10,8,6,0) 100%
             ) !important;
           }
