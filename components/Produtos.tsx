@@ -286,7 +286,7 @@ export default function Produtos() {
             Nosso Processo de Produção Premium
           </motion.p>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-0" style={{ position: 'relative', zIndex: 1 }}>
+          <div className="processo-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-0" style={{ position: 'relative', zIndex: 1 }}>
             {steps.map((s, i) => (
               <motion.div
                 key={i}

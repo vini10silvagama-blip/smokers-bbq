@@ -102,6 +102,14 @@ export default function Sobre() {
           }
           :global(.sobre-stats) {
             margin-bottom: clamp(48px, 10vw, 80px) !important;
+            position: relative;
+            z-index: 2;
+          }
+          :global(.sobre-stats > div) {
+            background: rgba(10,8,6,0.85);
+            backdrop-filter: blur(4px);
+            padding-top: 12px !important;
+            padding-bottom: 12px !important;
           }
           :global(.sobre-bg-desktop) { display: none; }
           :global(.sobre-bg-mobile) { display: block; }
@@ -109,8 +117,8 @@ export default function Sobre() {
             background: linear-gradient(
               180deg,
               rgba(10,8,6,1) 0%,
-              rgba(10,8,6,1) 58%,
-              rgba(10,8,6,0) 70%,
+              rgba(10,8,6,1) 70%,
+              rgba(10,8,6,0.5) 82%,
               rgba(10,8,6,0) 100%
             ) !important;
           }
