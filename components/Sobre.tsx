@@ -6,7 +6,7 @@ const reveal = (delay = 0) => ({ initial: { opacity: 0, y: 40 }, whileInView: { 
 
 export default function Sobre() {
   return (
-    <section id="sobre" className="sobre-section" style={{ position: 'relative', background: '#0A0806', padding: 'clamp(80px,10vw,140px) 0', overflow: 'hidden', minHeight: 'clamp(560px, 55vw, 760px)' }}>
+    <section id="sobre" className="sobre-section" style={{ position: 'relative', background: '#0A0806', padding: 'clamp(64px,8vw,120px) 0', overflow: 'hidden' }}>
       <div aria-hidden style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
         <div className="sobre-bg sobre-bg-desktop" style={{ position: 'absolute', inset: 0 }}>
           <Image
@@ -75,10 +75,30 @@ export default function Sobre() {
 
       <style jsx>{`
         :global(.sobre-bg-mobile) { display: none; }
+
+        /* Notebook (telas curtas) — comprime tipografia e espaçamentos */
+        @media (min-width: 1024px) and (max-height: 820px) {
+          :global(.sobre-section) {
+            padding-top: clamp(48px, 6vh, 80px) !important;
+            padding-bottom: clamp(48px, 6vh, 80px) !important;
+          }
+          :global(.sobre-section h2) {
+            font-size: clamp(22px, 2.6vw, 36px) !important;
+            margin-bottom: 16px !important;
+          }
+          :global(.sobre-section p) {
+            font-size: 14px !important;
+            line-height: 1.7 !important;
+            margin-bottom: 12px !important;
+          }
+          :global(.sobre-stats) {
+            padding-top: 20px !important;
+          }
+        }
+
         @media (max-width: 1023px) {
           :global(.sobre-section) {
             padding-bottom: clamp(340px, 85vw, 440px) !important;
-            min-height: 0 !important;
           }
           :global(.sobre-stats) {
             margin-bottom: clamp(48px, 10vw, 80px) !important;

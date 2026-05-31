@@ -102,7 +102,19 @@ export default function Contato() {
                 const form = e.currentTarget as HTMLFormElement
                 const nome = (form.elements.namedItem('nome') as HTMLInputElement)?.value || ''
                 const empresa = (form.elements.namedItem('empresa') as HTMLInputElement)?.value || ''
-                const msg = `Olá! Sou ${nome}${empresa ? ` da ${empresa}` : ''} e tenho interesse em ser parceiro Smokers BBQ. Gostaria de agendar uma degustação técnica.`
+                const whatsapp = (form.elements.namedItem('whatsapp') as HTMLInputElement)?.value || ''
+                const tipo = (form.elements.namedItem('tipo') as HTMLSelectElement)?.value || ''
+                const mensagem = (form.elements.namedItem('mensagem') as HTMLTextAreaElement)?.value || ''
+                const linhas = [
+                  'Olá! Quero ser parceiro da Smokers BBQ.',
+                  '',
+                  `*Nome:* ${nome}`,
+                  empresa ? `*Empresa:* ${empresa}` : '',
+                  `*WhatsApp:* ${whatsapp}`,
+                  tipo && tipo !== 'Selecione...' ? `*Tipo de negócio:* ${tipo}` : '',
+                  mensagem ? `*Mensagem:* ${mensagem}` : '',
+                ].filter(Boolean)
+                const msg = linhas.join('\n')
                 window.open(`https://wa.me/5511989460983?text=${encodeURIComponent(msg)}`, '_blank')
                 setSent(true)
               }} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
@@ -123,13 +135,13 @@ export default function Contato() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label style={labelStyle}>WhatsApp *</label>
-                    <input required placeholder="(11) 99999-9999" className="form-input" style={inputStyle}
+                    <input required name="whatsapp" placeholder="(11) 99999-9999" className="form-input" style={inputStyle}
                       onFocus={e => (e.target.style.borderColor = '#A3623C')}
                       onBlur={e => (e.target.style.borderColor = 'rgba(240,232,216,0.1)')} />
                   </div>
                   <div>
                     <label style={labelStyle}>Tipo de Negócio</label>
-                    <select className="form-input" style={{ ...inputStyle, appearance: 'none', cursor: 'pointer', color: '#B8AD9E' }}>
+                    <select name="tipo" className="form-input" style={{ ...inputStyle, appearance: 'none', cursor: 'pointer', color: '#B8AD9E' }}>
                       <option>Selecione...</option>
                       <option>Bar / Pub</option>
                       <option>Restaurante</option>
@@ -143,7 +155,7 @@ export default function Contato() {
                 </div>
                 <div>
                   <label style={labelStyle}>Mensagem</label>
-                  <textarea placeholder="Conte sobre seu negócio e interesse..." rows={4} className="form-input" style={{ ...inputStyle, resize: 'vertical' }}
+                  <textarea name="mensagem" placeholder="Conte sobre seu negócio e interesse..." rows={4} className="form-input" style={{ ...inputStyle, resize: 'vertical' }}
                     onFocus={e => (e.target.style.borderColor = '#A3623C')}
                     onBlur={e => (e.target.style.borderColor = 'rgba(240,232,216,0.1)')} />
                 </div>

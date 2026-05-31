@@ -16,7 +16,7 @@ const embers = Array.from({ length: 28 }, (_, i) => ({
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative flex items-center overflow-hidden" style={{ minHeight: '100vh', background: '#0A0806', paddingTop: '72px' }}>
+    <section id="hero" className="hero-section relative flex items-center overflow-hidden" style={{ background: '#0A0806', paddingTop: '72px' }}>
 
       {/* Vídeo desktop */}
       <video autoPlay muted loop playsInline preload="metadata" className="absolute inset-0 w-full h-full object-cover hidden md:block">
@@ -44,8 +44,8 @@ export default function Hero() {
         } as React.CSSProperties} />
       ))}
 
-<div className="relative z-10 w-full" style={{ maxWidth: '1160px', margin: '0 auto', padding: 'clamp(80px,12vh,120px) 20px clamp(48px,6vh,80px)' }}>
-        <motion.div {...fade(0)} className="inline-flex items-center gap-2 mb-8" style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#A3623C', border: '1px solid rgba(163,98,60,0.4)', padding: '8px 18px' }}>
+<div className="hero-inner relative z-10 w-full" style={{ maxWidth: '1160px', margin: '0 auto', padding: 'clamp(80px,12vh,120px) 20px clamp(48px,6vh,80px)' }}>
+        <motion.div {...fade(0)} className="hero-badge inline-flex items-center gap-2 mb-8" style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#A3623C', border: '1px solid rgba(163,98,60,0.4)', padding: '8px 18px' }}>
           <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#A3623C', display: 'inline-block' }} />
           American BBQ Premium · São Paulo, Brasil
         </motion.div>
@@ -57,11 +57,11 @@ export default function Hero() {
           <span style={{ color: '#A3623C' }}>Negócio.</span>
         </motion.h1>
 
-        <motion.p {...fade(0.4)} style={{ fontSize: 'clamp(15px, 2vw, 18px)', fontWeight: 400, color: '#B8AD9E', maxWidth: '580px', marginBottom: '40px', lineHeight: 1.8 }}>
+        <motion.p {...fade(0.4)} className="hero-tagline" style={{ fontSize: 'clamp(15px, 2vw, 18px)', fontWeight: 400, color: '#B8AD9E', maxWidth: '580px', marginBottom: '40px', lineHeight: 1.8 }}>
           Carnes defumadas por <strong style={{ color: '#F0E8D8', fontWeight: 600 }}>até 12h em lenhas frutíferas</strong>, prontas para servir em <strong style={{ color: '#F0E8D8', fontWeight: 600 }}>5 minutos</strong>. O legítimo Churrasco Texano para o seu bar ou restaurante.
         </motion.p>
 
-        <motion.div {...fade(0.6)} className="flex flex-wrap gap-3 mb-16">
+        <motion.div {...fade(0.6)} className="hero-ctas flex flex-wrap gap-3 mb-16">
           <a href="#contato" style={{ fontFamily: 'Oswald, sans-serif', fontSize: '13px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#0A0806', background: '#A3623C', padding: '14px 28px', textDecoration: 'none', clipPath: 'polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%)' }}>Quero uma Degustação Técnica</a>
           <a href="#produtos" style={{ fontFamily: 'Oswald, sans-serif', fontSize: '13px', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#F0E8D8', background: 'transparent', border: '1px solid rgba(240,232,216,0.35)', padding: '14px 28px', textDecoration: 'none', clipPath: 'polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%)' }}>Conheça Nossos Produtos</a>
         </motion.div>
@@ -75,6 +75,40 @@ export default function Hero() {
           ))}
         </motion.div>
       </div>
+
+      <style jsx>{`
+        :global(.hero-section) {
+          min-height: clamp(640px, 100vh, 960px);
+        }
+        @media (max-height: 800px) and (min-width: 768px) {
+          :global(.hero-section) {
+            min-height: 100vh;
+            padding-top: 60px !important;
+          }
+          :global(.hero-section .hero-inner) {
+            padding-top: clamp(40px, 6vh, 80px) !important;
+            padding-bottom: clamp(24px, 4vh, 60px) !important;
+          }
+          :global(.hero-section h1) {
+            font-size: clamp(34px, 4.6vw, 64px) !important;
+            margin-bottom: 18px !important;
+          }
+          :global(.hero-section .hero-tagline) {
+            margin-bottom: 28px !important;
+          }
+          :global(.hero-section .hero-ctas) {
+            margin-bottom: 32px !important;
+          }
+        }
+        @media (max-height: 720px) and (min-width: 768px) {
+          :global(.hero-section .hero-badge) {
+            display: none !important;
+          }
+          :global(.hero-section h1) {
+            font-size: clamp(32px, 4.2vw, 56px) !important;
+          }
+        }
+      `}</style>
     </section>
   )
 }
