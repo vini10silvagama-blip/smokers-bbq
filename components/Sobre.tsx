@@ -7,8 +7,8 @@ const reveal = (delay = 0) => ({ initial: { opacity: 0, y: 40 }, whileInView: { 
 export default function Sobre() {
   return (
     <section id="sobre" className="sobre-section" style={{ position: 'relative', background: '#0A0806', padding: 'clamp(64px,8vw,120px) 0', overflow: 'hidden' }}>
-      <div aria-hidden style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
-        <div className="sobre-bg sobre-bg-desktop" style={{ position: 'absolute', inset: 0 }}>
+      <div aria-hidden className="sobre-bg-desktop" style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
+        <div style={{ position: 'absolute', inset: 0 }}>
           <Image
             src="/banner-historia-smokers.webp"
             alt=""
@@ -17,17 +17,6 @@ export default function Sobre() {
             priority={false}
             sizes="100vw"
             style={{ objectFit: 'cover', objectPosition: 'right center' }}
-          />
-        </div>
-        <div className="sobre-bg sobre-bg-mobile" style={{ position: 'absolute', left: 0, right: 0, bottom: 0, height: '178vw', maxHeight: '900px', background: '#0A0806' }}>
-          <Image
-            src="/banner-historia-smokers-mobile.webp"
-            alt=""
-            fill
-            quality={92}
-            priority={false}
-            sizes="(max-width: 1023px) 100vw, 0px"
-            style={{ objectFit: 'cover', objectPosition: 'center bottom' }}
           />
         </div>
         <div className="sobre-overlay" style={{
@@ -66,6 +55,17 @@ export default function Sobre() {
                 </div>
               ))}
             </motion.div>
+
+            <motion.div {...reveal(0.7)} className="sobre-image-mobile" style={{ marginTop: '40px', width: '100%', aspectRatio: '941 / 1672', position: 'relative', overflow: 'hidden' }}>
+              <Image
+                src="/banner-historia-smokers-mobile.webp"
+                alt="Três pacotes de carnes defumadas Smokers BBQ"
+                fill
+                quality={92}
+                sizes="100vw"
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
+              />
+            </motion.div>
           </div>
 
           <div className="hidden lg:block" aria-hidden />
@@ -74,7 +74,7 @@ export default function Sobre() {
       </div>
 
       <style jsx>{`
-        :global(.sobre-bg-mobile) { display: none; }
+        :global(.sobre-image-mobile) { display: none; }
 
         /* Notebook (telas curtas) — comprime tipografia e espaçamentos */
         @media (min-width: 1024px) and (max-height: 820px) {
@@ -97,34 +97,8 @@ export default function Sobre() {
         }
 
         @media (max-width: 1023px) {
-          :global(.sobre-section) {
-            padding-bottom: clamp(700px, 178vw, 900px) !important;
-          }
-          :global(.sobre-stats) {
-            margin-bottom: clamp(32px, 6vw, 60px) !important;
-            position: relative;
-            z-index: 2;
-          }
-          :global(.sobre-stats > div) {
-            background: rgba(10,8,6,0.92);
-            backdrop-filter: blur(6px);
-            padding-top: 14px !important;
-            padding-bottom: 14px !important;
-            padding-left: 12px !important;
-            padding-right: 12px !important;
-          }
           :global(.sobre-bg-desktop) { display: none; }
-          :global(.sobre-bg-mobile) { display: block; }
-          :global(.sobre-overlay) {
-            background: linear-gradient(
-              180deg,
-              rgba(10,8,6,1) 0%,
-              rgba(10,8,6,1) 32%,
-              rgba(10,8,6,0.4) 42%,
-              rgba(10,8,6,0) 55%,
-              rgba(10,8,6,0) 100%
-            ) !important;
-          }
+          :global(.sobre-image-mobile) { display: block !important; }
         }
       `}</style>
     </section>
